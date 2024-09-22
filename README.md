@@ -1,6 +1,6 @@
 # Документация по модели C4 
 
-This repo contains the source for the GitHub Pages/Jekyll website published at https://c4model.com
+Этот репозиторий содержит исходники для GitHub Pages, сайта опубликованного по адресу https://c4m.khramtsoft.ru
 
 ## Local authoring
 
