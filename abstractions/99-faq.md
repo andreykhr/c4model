@@ -1,12 +1,12 @@
 ---
 layout: default
-title: FAQ
-parent: Abstractions
+title: ЧаВо
+parent: Абстракции
 nav_order: 99
 permalink: /abstractions/faq
 ---
 
-# Frequently asked questions
+# Часто задаваемые вопросы
 
 ## Can we change the terminology?
 

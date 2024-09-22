@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Queues and topics
-parent: Abstractions
+title: Очереди и топики
+parent: Абстракции
 nav_order: 12
 permalink: /abstractions/queues-and-topics
 ---

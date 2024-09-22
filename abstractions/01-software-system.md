@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 1. Software system
-parent: Abstractions
+title: 1. Программная система
+parent: Абстракции
 nav_order: 1
 permalink: /abstractions/software-system
 ---

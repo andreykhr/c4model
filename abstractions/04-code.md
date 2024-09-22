@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 4. Code
-parent: Abstractions
+title: 4. Код
+parent: Абстракции
 nav_order: 4
 permalink: /abstractions/code
 ---

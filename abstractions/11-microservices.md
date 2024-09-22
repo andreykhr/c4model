@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Microservices
-parent: Abstractions
+title: Микросервисы
+parent: Абстракции
 nav_order: 11
 permalink: /abstractions/microservices
 ---

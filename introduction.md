@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Introduction
+title: Введение
 nav_order: 2
 permalink: /introduction
 ---

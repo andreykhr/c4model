@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Abstractions
+title: Абстракции
 nav_order: 3
 has_children: true
 permalink: /abstractions

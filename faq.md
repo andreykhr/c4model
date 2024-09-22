@@ -1,11 +1,11 @@
 ---
 layout: default
-title: FAQ
+title: ЧаВо
 nav_order: 20
 permalink: /faq
 ---
 
-# Frequently asked questions
+# Часто задаваемые вопросы
 
 ## What's the background behind the C4 model?
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: 3. Component
-parent: Abstractions
+title: 3. Компонент
+parent: Абстракции
 nav_order: 3
 permalink: /abstractions/component
 ---
