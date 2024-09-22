@@ -1,12 +1,12 @@
 # Документация по модели C4 
 
-Этот репозиторий содержит исходники для GitHub Pages, сайта опубликованного по адресу https://c4m.khramtsoft.ru
+Этот репозиторий содержит исходники для `GitHub Pages`, сайта опубликованного по адресу [https://c4m.khramtsoft.ru](https://c4m.khramtsoft.ru)
 
-## Local authoring
+## Локальная разработка
 
-If you'd like to author/view the docs locally:
+Если вы хотите создать / просмотреть документы локально:
 
-1. `git clone https://github.com/simonbrowndotje/c4model.git`
-2. `cd c4model`
-3. `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve`
-4. Open http://localhost:4000
+1. `git clone https://github.com/andreykhr/c4model.git`
+1. `cd c4model`
+1. `docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve`
+1. Open http://localhost:4000
