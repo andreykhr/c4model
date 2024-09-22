@@ -5,36 +5,36 @@ nav_order: 2
 permalink: /introduction
 ---
 
-# Introduction
+# Введение
 
-Ask somebody in the building industry to visually communicate the architecture of a building and you'll be presented
-with site plans, floor plans, elevation views, cross-section views and detail drawings. In contrast, ask a software
-developer to communicate the software architecture of a software system using diagrams and you'll likely get a
-confused mess of boxes and lines ... inconsistent notation (colour coding, shapes, line styles, etc), ambiguous naming,
-unlabelled relationships, generic terminology, missing technology choices, mixed abstractions, etc.
+Попросите кого-нибудь из представителей строительной отрасли визуально передать архитектуру здания и вам будут представлены
+планы участка, планы этажей, вид с высоты, виды поперечного сечения и подробные чертежи. Напротив, попросите
+разработчика программного обеспечения описать программную архитектуру программной системы с помощью диаграмм, и вы, скорее всего, получите
+запутанное нагромождение прямоугольников и линий ... несогласованные обозначения (цветовое кодирование, формы, стили линий и т.д.), неоднозначные названия,
+немаркированные связи, общая терминология, отсутствие выбора технологий, смешанные абстракции и т.д.
 
-| ![A software architecture sketch](/images/sketch-1.jpg) | ![A software architecture sketch](/images/sketch-2.jpg) |
-| ![A software architecture sketch](/images/sketch-3.jpg) | ![A software architecture sketch](/images/sketch-4.jpg) |
+| ![Эскиз архитектуры программного обеспечения](/images/sketch-1.jpg) | ![Эскиз архитектуры программного обеспечения](/images/sketch-2.jpg) |
+| ![Эскиз архитектуры программного обеспечения](/images/sketch-3.jpg) | ![Эскиз архитектуры программного обеспечения](/images/sketch-4.jpg) |
 
-As an industry, we do have the Unified Modeling Language (UML), ArchiMate and SysML, but asking whether these provide
-an effective way to communicate software architecture is often irrelevant because many teams have already thrown them
-out in favour of much simpler "boxes and lines" diagrams. Abandoning these modelling languages is one thing but,
-perhaps in the race for agility, many software development teams have lost the ability to communicate visually.
+В нашей отрасли действительно есть унифицированный язык моделирования (UML), ArchiMate и SysML, но вопрос о том, обеспечивают ли они
+эффективный способ передачи информации об архитектуре программного обеспечения, часто неуместен, поскольку многие команды уже отказались от них
+в пользу гораздо более простых схем "прямоугольников и линий". Отказ от этих языков моделирования - это одно, но,
+возможно, в гонке за гибкостью многие команды разработчиков программного обеспечения утратили способность к визуальному общению.
 
-## Maps of your code
+## Карты вашего кода
 
-The C4 model was created as a way to help software development teams describe and communicate software architecture,
-both during up-front design sessions and when retrospectively documenting an existing codebase. It's a way to create
-"maps of your code", at various levels of detail, in the same way you would use something like Google Maps to zoom in
-and out of an area you are interested in.
+Модель C4 была создана для того, чтобы помочь командам разработчиков программного обеспечения описывать архитектуру программного обеспечения и обмениваться
+информацией о ней как на начальных этапах проектирования, так и при ретроспективном документировании существующей кодовой базы. Это способ создания
+"карт вашего кода" с различными уровнями детализации, аналогично тому, как вы использовали бы что-то вроде Google Maps для увеличения
+или уменьшения масштаба интересующей вас области.
 
 | ![](/images/map-4.jpg) | ![](/images/map-3.jpg) | ![](/images/map-2.jpg) | ![](/images/map-1.jpg) |
 | ![](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/Containers.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/Components.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png) |
-| Level 1: A [system context diagram](/diagrams/system-context) provides a starting point, showing how the software system in scope fits into the world around it. | Level 2: A [container diagram](/diagrams/container) zooms into the software system in scope, showing the applications and data stores inside it. | Level 3: A [component diagram](/diagrams/component) zooms into an individual container, showing the components inside it. | Level 4: A [code diagram](/diagrams/code) (e.g. UML class) can be used to zoom into an individual component, showing how that component is implemented at the code level. |
+| Уровеь 1: Диаграмма [системный контекст (system context)](/diagrams/system-context) обеспечивает отправную точку, показывающую, как данная программная система вписывается в окружающий мир. | Уровень 2: Диаграмма [контейнеров (container)](/diagrams/container) увеличивает масштаб системы программного обеспечения, показывая приложения и хранилища данных внутри нее. | Уровень 3: Диаграмма [компонентов (component)](/diagrams/component) увеличивает масштаб отдельного контейнера, показывая компоненты внутри него. | Уровень 4: Диаграмма [код (code)](/diagrams/code) (например, класс UML) может использоваться для увеличения масштаба отдельного компонента, показывая, как этот компонент реализован на уровне кода. |
 
-## Improving diagramming maturity
+## Повышение зрелости диаграм
 
-The goal of the C4 model is to raise the level of maturity associated with software architecture diagrams.
+Цель модели C4 - повысить уровень зрелости, связанный с диаграммами архитектуры программного обеспечения.
 
 ![](/images/software-architecture-diagramming-maturity-model.png)
 
