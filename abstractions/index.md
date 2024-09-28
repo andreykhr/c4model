@@ -9,17 +9,17 @@ has_toc: false
 
 # Abstractions
 
-In order to create some "maps of your code", we first need a common set of abstractions
-that we can use to describe the static structure of a software system. In the C4 model:
+Чтобы создать некие "карты вашего кода", нам сначала нужен общий набор абстракций, который мы можем использовать для 
+описания статической структуры программной системы. В модели C4:
 
-> A [software system](/abstractions/software-system)
-> is made up of one or  more [containers](/abstractions/container) (applications and data stores),
-> each of which contains one or more [components](/abstractions/component),  which in turn are implemented by one or
-> more [code](/abstractions/code) elements (classes, interfaces, objects, functions, etc).
-> And people (actors, roles, personas, named individuals, etc) use the software systems that we build.
+> [Программная система](/abstractions/software-system) состоит из одного или нескольких [контейнеров](/abstractions/container)
+> (приложений и хранилищ данных), каждый из которых содержит один или несколько [компонентов](/abstractions/component),
+> которые, в свою очередь, реализуются одним или несколькими элементами [кода](/abstractions/code) (классами, интерфейсами,
+> объектами, функциями и т.д.). А люди (актеры, роли, персоны, названные лица и т.д.) используют программные системы, 
+> которые мы создаем.
 
 ![The abstractions behind the C4 model](/images/abstractions.png)
 
-The C4 model is an "abstraction-first" approach to diagramming software architecture, based upon abstractions that
-reflect how software architects and developers think about and build software. The small set of abstractions and
-diagram types makes the C4 model easy to learn and use.
+Модель C4 - это основанный на абстракции подход к построению диаграмм архитектуры программного обеспечения, основанный 
+на абстракциях, которые отражают то, как архитекторы и разработчики программного обеспечения думают о программном 
+обеспечении и создают его. Небольшой набор абстракций и типов диаграмм упрощает изучение и использование модели C4.
