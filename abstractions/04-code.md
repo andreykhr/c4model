@@ -6,7 +6,7 @@ nav_order: 4
 permalink: /abstractions/code
 ---
 
-# Code
+# Код
 
-Finally, components are made up of one or more code elements constructed with the basic building blocks
-of the programming language that you're using - classes, interfaces, enums, functions, objects, etc.
+Наконец, компоненты состоят из одного или нескольких элементов кода, построенных с использованием базовых компонентов
+используемого вами языка программирования - классов, интерфейсов, перечислений, функций, объектов и т.д.
