@@ -6,96 +6,102 @@ nav_order: 3
 permalink: /abstractions/component
 ---
 
-# Component
+# Компонент
 
-The word "component" is a hugely overloaded term in the software development industry but, in the C4 model,
-a component is a grouping of related functionality encapsulated behind a well-defined interface.
-If you're using a language like Java or C#, the simplest way to think of a component is that it's a collection
-of implementation classes behind an interface.
+Слово "компонент" является чрезвычайно перегруженным термином в индустрии разработки программного обеспечения, но в 
+модели C4 компонент - это совокупность связанных функциональных возможностей, заключенных в четко определенный интерфейс.
+Если вы используете такой язык, как Java или C#, то самый простой способ представить себе компонент как набор
+классов реализации, стоящих за интерфейсом.
 
-With the C4 model, components are *not* separately deployable units. Instead, it's the container that's the
-deployable unit. In other words, all components inside a container execute in the same process space.
-Aspects such as how components are packaged (e.g. one component vs many components per JAR file, DLL,
-shared library, etc) is an orthogonal concern.
+В модели C4 компоненты не являются отдельно развертываемыми единицами. Вместо этого
+развертываемой единицей является контейнер. Другими словами, все компоненты внутри контейнера выполняются в одном и том 
+же пространстве процессов. Такие аспекты, как способ упаковки компонентов (например, один компонент или много 
+компонентов в JAR-файле, DLL-библиотеке, общей библиотеке и т.д.), являются ортогональными.
 
-## Components vs code?
+## Компоненты против кода?
 
-A component is a way to step up one level of abstraction from the code-level building blocks that you have in the
-programming language that you're using. For example:
+Компонент - это способ повысить уровень абстракции по сравнению со стандартными блоками на уровне кода, которые есть в
+используемом вами языке программирования. Например:
 
-- __Object-oriented programming languages (e.g. Java, C#, C++, etc)__: A component is made up of classes and interfaces.
-- __Procedural programming languages (e.g. C)__: A component could be made up of a number of C files in a particular directory.
-- __JavaScript__: A component could be a JavaScript module, which is made up of a number of objects and functions.
-- __Functional programming languages__: A component could be a module (a concept supported by languages such as F#, Haskell, etc), which is a logical grouping of related functions, types, etc.
+- __Объектно-ориентированные языки программирования (например, Java, C#, C++ и т.д.)__: Компонент состоит из классов и 
+интерфейсов.
+- __Процедурные языки программирования (например, C)__: Компонент может состоять из нескольких файлов C в определенном 
+каталоге.
+- __JavaScript__: Компонентом может быть модуль JavaScript, который состоит из ряда объектов и функций.
+- __Функциональные языки программирования__: Компонентом может быть модуль (концепция, поддерживаемая такими языками, 
+как F#, Haskell и т.д.), который представляет собой логическую группировку связанных функций, типов и т.д.
 
-If you're using an object-oriented programming language, your components will be implemented using one or more classes.
-Let's look at a quick example to better define what a component is in the context of some code.
+Если вы используете объектно-ориентированный язык программирования, ваши компоненты будут реализованы с использованием 
+одного или нескольких классов. Давайте рассмотрим краткий пример, чтобы лучше определить, что такое компонент в 
+контексте некоторого кода.
 
-The [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) application is a sample
-codebase that illustrates how to build a Java web application using the Spring MVC framework.
-From a non-technical perspective, it's a software system designed for an imaginary pet clinic that stores information
-about pets and their owners, visits made to the clinic, and the vets who work there. The system is only designed to
-be used by employees of the clinic. From a technical perspective, the Spring PetClinic system consists of a web
-application and a relational database schema.
+Приложение [Spring PetClinic](https://github.com/spring-projects/spring-petclinic) представляет собой образец
+кодовой базы, который иллюстрирует, как создать веб-приложение Java с использованием платформы Spring MVC framework.
+С нетехнической точки зрения, это программная система, разработанная для воображаемой клиники для домашних животных, 
+которая хранит информацию о домашних животных и их владельцах, посещениях клиники и ветеринарах, которые там работают. 
+Система предназначена только для использования сотрудниками клиники. С технической точки зрения система Spring 
+PetClinic состоит из веб-приложения и схемы реляционной базы данных.
 
-The version<sup>1</sup> of the web application we'll look at here is a typical layered architecture consisting of a number of
-web MVC controllers, a service containing "business logic" and some repositories for data access. There are also
-some domain and util classes too. If you download a copy of the GitHub repository<sup>2</sup>, open it in your IDE of choice
-and visualise it by reverse-engineering a UML class diagram from the code, you'll get something like this.
+Версия<sup>1</sup> веб-приложения, которое мы рассмотрим здесь, представляет собой типичную многоуровневую архитектуру, 
+состоящую из нескольких веб-контроллеров MVC, сервиса, содержащего "бизнес-логику", и некоторых хранилищ для доступа к 
+данным. Есть также некоторые классы домена и утилиты. Если вы загрузите копию репозитория GitHub<sup>2</sup>, откроете 
+ее в выбранной вами среде IDE и визуализируете ее путем обратного проектирования диаграммы классов UML из кода, вы 
+получите что-то вроде этого.
 
 [![](/images/components-vs-classes-1.png)](/images/components-vs-classes-1.png)
 
-As you would expect, this diagram is showing you all the Java classes and interfaces that make up the Spring
-PetClinic web application, plus all the relationships between them. The properties and methods are hidden on
-the diagram because they add too much noise to the picture. This isn't a complex codebase by any stretch of the
-imagination but, by showing classes and interfaces, the diagram is showing too much detail.
+Как и следовало ожидать, на этой диаграмме показаны все Java-классы и интерфейсы, составляющие веб-приложение Spring
+PetClinic, а также все взаимосвязи между ними. Свойства и методы на диаграмме скрыты, поскольку они создают слишком 
+много помех для изображения. Это ни в коем случае не сложная кодовая база, но из-за того, что на диаграмме показаны 
+классы и интерфейсы, на ней слишком много деталей.
 
-Let's remove those classes that aren't useful to having an "architecture" discussion about the system.
-In other words, let's only show those classes/interfaces that have some significance from a static structure
-perspective. In concrete terms, for this specific codebase, it means excluding the model/domain classes
-(they are just data structures) and util classes.
+Давайте удалим те классы, которые бесполезны для обсуждения "архитектуры" системы. Другими словами, давайте покажем 
+только те классы/интерфейсы, которые имеют некоторое значение с точки зрения статической структуры. В конкретных 
+терминах, для данной конкретной кодовой базы это означает исключение классов model/domain (они являются просто 
+структурами данных) и классов util.
 
 [![](/images/components-vs-classes-2.png)](/images/components-vs-classes-2.png)
 
-After a little rearranging, we now have a simpler diagram with which to reason about the software architecture.
-We can also see the architectural layers again (controllers, services and repositories). But this diagram is still
-showing _code-level elements_ (i.e. classes and interfaces). In order to zoom up one level, we need to identify which
-of these code-level elements can be grouped together to form "components". The strategy for grouping code-level elements
-into components will vary from codebase to codebase but, for this codebase,
-the strategy might look like this.
+После небольшой реорганизации у нас теперь есть более простая схема, с помощью которой можно рассуждать об архитектуре 
+программного обеспечения. Мы также можем снова увидеть архитектурные уровни (контроллеры, службы и хранилища). Но на 
+этой диаграмме по-прежнему показаны элементы уровня кода (т.е. классы и интерфейсы). Чтобы увеличить масштаб на один 
+уровень, нам нужно определить, какие из этих элементов уровня кода можно сгруппировать вместе, чтобы сформировать 
+"компоненты". Стратегия группировки элементов на уровне кода в компоненты будет варьироваться от базы кода к базе кода, 
+но для этой базы кода стратегия может выглядеть следующим образом.
 
 [![](/images/components-vs-classes-3.png)](/images/components-vs-classes-3.png)
 
-Each of the blue boxes represents a "component" in this codebase. In summary, each of the
-web controllers is a separate component, along with the result of combining the remaining interfaces and their
-implementation classes. If we remove the code level noise, we get a picture like this.
+Каждый из синих прямоугольников представляет собой "компонент" в этой кодовой базе. Таким образом, каждый из
+веб-контроллеров является отдельным компонентом, а также результатом объединения остальных интерфейсов и
+классов их реализации. Если мы удалим шум на уровне кода, мы получим примерно такую картину.
 
 [![](/images/components-vs-classes-4.png)](/images/components-vs-classes-4.png)
 
-In essence, we're grouping the classes and interfaces into components to form units of related functionality.
-You will likely have shared code (e.g. abstract base classes, supporting classes, helper classes, utility classes, etc)
-that are used across many components, such as the ```JdbcPetVisitExtractor``` in this example. Some can be refactored
-and moved "inside" a particular component, but some of them are inevitable.
+По сути, мы группируем классы и интерфейсы в компоненты, чтобы сформировать модули со связанными функциональными 
+возможностями. Скорее всего, у вас будет общий код (например, абстрактные базовые классы, вспомогательные классы, 
+вспомогательные классы-помощницы и т.д.) которые используются во многих компонентах, таких как `JdbcPetVisitExtractor` 
+в этом примере. Некоторые из них могут быть переработаны и перенесены "внутрь" конкретного компонента, но некоторые из 
+них неизбежны.
 
-Although this example illustrates a traditional layered architecture, the same principles are applicable regardless of
-how you package your code (e.g. by layer, feature or component) or the architectural style in use (e.g. layered,
-hexagonal, ports and adapters, etc). If your codebase is small enough, you can go through this process manually.
-For larger codebases though, you'll likely want to consider automatic generation of component diagrams by
-reverse-engineering your codebase ([example](https://github.com/structurizr/java/blob/master/structurizr-dsl/src/test/resources/dsl/spring-petclinic/workspace.dsl)).
+Хотя этот пример иллюстрирует традиционную многоуровневую архитектуру, одни и те же принципы применимы независимо от
+того, как вы упаковываете свой код (например, по уровням, функциям или компонентам) или используемого архитектурного 
+стиля (например, многоуровневый, шестиугольный, порты и адаптеры и т.д.). Если ваша кодовая база достаточно мала, вы 
+можете выполнить этот процесс вручную. Однако для больших кодовых баз вы, вероятно, захотите рассмотреть возможность 
+автоматической генерации диаграмм компонентов с помощью реверс-инжиниринг вашей кодовой базы 
+([example](https://github.com/structurizr/java/blob/master/structurizr-dsl/src/test/resources/dsl/spring-petclinic/workspace.dsl)).
 
-- <sup>1</sup> the diagrams shown here do not reflect the latest version of the Spring PetClinic, but are sufficient for the discussion
-- <sup>2</sup> `git checkout 95de1d9f8bf63560915331664b27a4a75ce1f1f6` is the version these diagrams were based upon
+- <sup>1</sup> приведенные здесь диаграммы не отражают последнюю версию Spring PetClinic, но их достаточно для обсуждения
+- <sup>2</sup> `git checkout 95de1d9f8bf63560915331664b27a4a75ce1f1f6` - это версия, на которой были основаны эти диаграммы
 
-## FAQ
+## Часто задаваемые вопросы (ЧаВо)
 
-### Is a Java JAR, C# assembly, DLL, module, package, namespace, folder etc a component?
+### Является ли Java JAR, сборка C#, библиотека DLL, модуль, пакет, пространство имен, папка и т.д. компонентом?
 
-Perhaps but, again, typically not. The C4 model is about showing the runtime units (containers) and how
-functionality is partitioned across them (components), rather than organisational units such as Java JAR files,
-C# assemblies, DLLs, modules, packages, namespaces or folder structures.
+Возможно, но, опять же, как правило, нет. Модель C4 предназначена для отображения модулей среды выполнения (контейнеров)
+и распределения функциональности между ними (компонентами), а не организационных единиц, таких как файлы Java JAR, 
+сборки C#, библиотеки DLL, модули, пакеты, пространства имен или структуры папок.
 
-Of course, there may be a one-to-one mapping between these constructs and a component; e.g. if you're building
-a hexagonal architecture, you may create a single Java JAR file or C# assembly per component. On the other hand,
-a single component might be implemented using code from a number of JAR files, which is typically what happens
-when you start to consider third-party frameworks/libraries, and how they become embedded in your codebase.
-
+Конечно, между этими конструкциями и компонентом может быть взаимно-однозначное соответствие; например, если вы создаете
+гексагональную архитектуру, вы можете создать один файл Java JAR или сборку C# для каждого компонента. С другой стороны,
+один компонент может быть реализован с использованием кода из нескольких JAR-файлов, что обычно и происходит
+когда вы начинаете рассматривать сторонние фреймворки/ библиотеки и то, как они встраиваются в вашу кодовую базу.
