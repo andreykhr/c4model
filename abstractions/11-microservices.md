@@ -6,103 +6,113 @@ nav_order: 11
 permalink: /abstractions/microservices
 ---
 
-# Microservices
+# Микросервисы
 
-Broadly speaking, there are two options for diagramming microservices when using the C4 model, although it depends
-what you mean by "microservice". With that in mind, let's start from the beginning.
+Вообще говоря, существует два варианта построения диаграмм микросервисов при использовании модели C4, хотя это зависит
+от того, что вы подразумеваете под "микросервисом". Имея это в виду, давайте начнем с самого начала.
 
-## Stage 1 - monolithic architectural style
+## Этап 1 - монолитный архитектурный стиль
 
-Imagine that we work for a small cash-strapped startup company and our task is to build a software system (named "X")
-that offers business capabilities A, B, and C to our customers. Our system context diagram might look like this:
+Представьте, что мы работаем в небольшой начинающей компании, испытывающей нехватку средств, и наша задача - создать 
+программную систему (названую "X"), которая предоставляет нашим клиентам бизнес-возможности A, B и C. Контекстная 
+диаграмма нашей системы может выглядеть следующим образом:
 
 ![](/images/microservices/1.png)
 
-Arguably the quickest and cheapest way to get something delivered, especially as a cash-strapped startup with a
-small engineering team, is to use a monolithic architecture, consisting of a single monolithic web application
-reading from and writing to a single monolithic database schema. The resulting container diagram looks like this:
+Возможно, самый быстрый и дешевый способ добиться чего-либо, особенно для стартапа с небольшой командой инженеров, 
+испытывающего нехватку средств - это использовать монолитную архитектуру, состоящую из единого монолитного 
+веб-приложения, выполняющего чтение из единой монолитной схемы базы данных и запись в нее. Результирующая схема 
+контейнера выглядит следующим образом:
 
 ![](/images/microservices/2.png)
 
-## Stage 2 - microservices architectural style
+## Этап 2 - архитектурный стиль микросервисов
 
-A couple of years have gone by - we have some paying customers, traffic is starting to scale, we've hired a few
-more engineers, and the codebase is growing. Our monolithic architecture is starting to slow us down, so we
-make the decision to transition to a microservices architecture. That raises the question - what is a microservice?
+Прошло пару лет - у нас появилось несколько платежеспособных клиентов, трафик начал увеличиваться, мы наняли еще
+несколько инженеров, а кодовая база растет. Наша монолитная архитектура начинает замедлять работу, поэтому мы
+принимаем решение перейти на архитектуру микросервисов. Возникает вопрос - что такое микросервис?
 
-To answer this question, we'll refer to [Microservices](https://martinfowler.com/articles/microservices.html) written
-by James Lewis and Martin Fowler:
+Чтобы ответить на этот вопрос, мы обратимся к [Микросервисам](https://martinfowler.com/articles/microservices.html), 
+написанным Джеймсом Льюисом и Мартином Фаулером:
 
-> In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery.
+> Вкратце, архитектурный стиль микросервисов - это подход к разработке единого приложения в виде набора небольших 
+> сервисов, каждый из которых работает в рамках своего собственного процесса и взаимодействует с помощью упрощенных 
+> механизмов, часто с помощью HTTP resource API. Эти сервисы основаны на бизнес-возможностях и независимо развертываются
+> с помощью полностью автоматизированного механизма развертывания.
 
-To help us align this with the C4 model, let's substitute "application" for "software system":
+Чтобы привести это в соответствие с моделью C4, давайте заменим "приложение" на "программную систему":
 
-> In short, the microservice architectural style is an approach to developing a single __software system__ as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery.
+> Вкратце, архитектурный стиль микросервисов - это подход к разработке единой __программной системы__ в виде набора 
+> небольших сервисов, каждый из которых работает в рамках своего собственного процесса и взаимодействует с помощью 
+> упрощенных механизмов, часто HTTP resource API. Эти сервисы основаны на бизнес-возможностях и могут быть независимо 
+> развернуты с помощью полностью автоматизированного механизма развертывания.
 
-In this stage of our startup's journey, although we've hired a few more engineers, we've decided to stay
-as a single team. Our system context diagram remains the same:
+На данном этапе развития нашего стартапа, несмотря на то, что мы наняли еще несколько инженеров, мы решили остаться
+единой командой. Схема контекста нашей системы остается прежней:
 
 ![](/images/microservices/3.png)
 
-But our container diagram has changed. We've decided to retain the single monolithic UI of the existing
-web application, but move the business logic and data into individual microservices. The resulting container diagram
-now looks like this:
+Но наша схема контейнера изменилась. Мы решили сохранить единый монолитный пользовательский интерфейс существующего
+веб-приложения, но перенести бизнес-логику и данные в отдельные микросервисы. Получившаяся схема контейнера теперь 
+выглядит следующим образом:
 
 ![](/images/microservices/4.png)
 
-As we're still a single engineering team, transitioning to a microservices architecture is an implementation detail
-that is only apparent inside the team boundary. This is why all seven containers are shown inside the software system 
-boundary, with each "microservice" being a combination of an API container (hexagon) and a database schema container (cylinder).
-As a result, you will notice that this container diagram doesn't show microservices as explicit boxes.
-Instead, this version of the diagram uses colour coding the show the relationship between pairs of API and database
-schema containers. If you wanted to be more explicit about this pairing, you could draw a box around each pair to
-show they are grouped together.
+Поскольку мы по-прежнему являемся единой командой инженеров, переход на архитектуру микросервисов - это деталь 
+реализации, которая очевидна только внутри команды. Вот почему все семь контейнеров показаны внутри границы программной
+системы, причем каждый "микросервис" представляет собой комбинацию контейнера API (шестиугольника) и контейнера схемы 
+базы данных (цилиндра). В результате вы заметите, что на этой диаграмме контейнеров микросервисы не отображаются в виде
+явных полей. Вместо этого в этой версии диаграммы используется цветовое кодирование, чтобы показать взаимосвязь между 
+парами API и базы данных контейнеры схемы. Если вы хотите более подробно описать это сопряжение, вы можете обвести 
+каждую пару рамкой, чтобы показать, что они сгруппированы вместе.
 
 ![](/images/microservices/5.png)
 
-Imagine now that we are going to expand the scope of our software system to also include business capability D.
-The revised system context diagram would look like this:
+Теперь представьте, что мы собираемся расширить сферу применения нашей программной системы, включив в нее также развитие
+бизнес-возможностей. Пересмотренная контекстная диаграмма системы будет выглядеть следующим образом:
 
 ![](/images/microservices/6.png)
 
-And if that new business capability was implemented by a new microservice, which is just a single stateless AWS lambda,
-the revised container diagram would look like this:
+И если бы эта новая бизнес-возможность была реализована с помощью нового микросервиса, который представляет собой всего
+лишь один AWS lambda без сохранения состояния, пересмотренная схема контейнера выглядела бы следующим образом:
 
 ![](/images/microservices/7.png)
 
-## Stage 3 - Conway's Law
+## Этап 3 - Закон Конвея
 
-As our company grows, and moves from startup to scaleup, we start looking at ways to optimise 
-delivery, and decide to look at [Conway's Law](https://en.wikipedia.org/wiki/Conway%27s_law) as a way to do this. 
-In summary, we decide to split our single engineering team into a number of teams, the result of which is that each 
-microservice will be owned by a separate team:
+По мере того как наша компания растет и переходит от стартапа к масштабированию, мы начинаем искать способы оптимизации
+доставки и решаем обратиться к [закону Конвея] (https://en.wikipedia.org/wiki/Conway%27s_law) как к способу достижения 
+этой цели. Таким образом, мы решили разделить нашу единую инженерную команду на несколько команд, в результате чего
+каждый микросервис будет принадлежать отдельной команде:
 
-- Team X: owns software system X providing the UI related to business capabilities A, B, C, and D.
-- Team A: owns service A.
-- Team B: owns service B.
-- Team C: owns service C.
-- Team D: owns service D.
+- Команда X: владеет программной системой X, предоставляющей пользовательский интерфейс, связанный с 
+бизнес-возможностями A, B, C и D.
+- Команда А: владеет службой А.
+- Команда B: владеет службой B.
+- Команда C: владеет службой C.
+- Команда D: владеет службой D.
 
-We can now use the C4 model to look at each software system from the perspective of the team that owns it,
-with each service being "promoted" from a pairing of containers into a software system. The system
-context diagram for team X now looks like this:
+Теперь мы можем использовать модель C4, чтобы взглянуть на каждую программную систему с точки зрения команды, которой
+она принадлежит, при этом каждая услуга "продвигается" из пары контейнеров в программную систему. Схема системного
+контекста для Команды X теперь выглядит следующим образом:
 
 ![](/images/microservices/8.png)
 
-Team X has only retained the monolithic UI, so the revised container diagram for software system X looks like this:
+Команда X сохранила только монолитный пользовательский интерфейс, поэтому пересмотренная схема контейнера для 
+программной системы X выглядит следующим образом:
 
 ![](/images/microservices/9.png)
 
-And from the perspective of team A, the system context diagram for service A looks like this:
+И с точки зрения команды А, схема системного контекста для службы А выглядит следующим образом:
 
 ![](/images/microservices/10.png)
 
-And the container diagram for service A looks like this:
+А схема контейнера для сервиса A выглядит следующим образом:
 
 ![](/images/microservices/11.png)
 
-## Summary
+## Резюме
 
-The approach to take for diagramming a microservices architectural style depends upon the ownership of
-the individual services, and whether you see them as an implementation detail inside a single software system or
-as separate software systems that are (or could be) owned by separate teams.
+Подход к построению диаграммы архитектурного стиля микросервисов зависит от того, кому принадлежат
+отдельные сервисы, и от того, рассматриваете ли вы их как детали реализации в рамках единой программной системы или
+как отдельные программные системы, которые принадлежат (или могли бы принадлежать) отдельным командам.
