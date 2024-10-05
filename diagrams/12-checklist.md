@@ -1,40 +1,40 @@
 ---
 layout: default
-title: Review checklist
-parent: Diagrams
+title: Контрольный список проверки
 parent: Диаграммы
 nav_order: 12
 permalink: /diagrams/checklist
 ---
 
-# Software architecture diagram review checklist
+# Контрольный список для проверки диаграмм архитектуры программного обеспечения
 
-## General
+## Общие
 
-| Does the diagram have a title? | Yes | No |
-| Do you understand what the diagram type is? | Yes | No |
-| Do you understand what the diagram scope is? | Yes | No |
-| Does the diagram have a key/legend? | Yes | No |
+| Есть ли у диаграммы название? | Да | Нет |
+| Вы понимаете, что это за тип диаграммы? | Да | Нет |
+| Вы понимаете, что такое область применения диаграммы? | Да | Нет |
+| Есть ли у диаграммы ключ/условные обозначения? | Да | Нет |
 
-## Elements
+## Элементы
 
-| Does every element have a name? | Yes | No |
-| Do you understand the type of every element? (i.e. the level of abstraction; e.g. software system, container, etc) | Yes | No |
-| Do you understand what every element does? | Yes | No |
-| Where applicable, do you understand the technology choices associated with every element? | Yes | No |
-| Do you understand the meaning of all acronyms and abbreviations used? | Yes | No |
-| Do you understand the meaning of all colours used? | Yes | No |
-| Do you understand the meaning of all shapes used? | Yes | No |
-| Do you understand the meaning of all icons used? | Yes | No |
-| Do you understand the meaning of all border styles used? (e.g. solid, dashed, etc) | Yes | No |
-| Do you understand the meaning of all element sizes used? (e.g. small vs large boxes) | Yes | No |
+| У каждого элемента есть имя? | Да | Нет |
+| Понимаете ли вы тип каждого элемента? (т.е. уровень абстракции, например, программная система, контейнер и т.д.) | Да | Нет |
+| Вы понимаете, что делает каждый элемент? | Да | Нет |
+| Там, где это применимо, понимаете ли вы технологические особенности, связанные с каждым элементом? | Да | Нет |
+| Понимаете ли вы значение всех используемых сокращений? | Да | Нет |
+| Понимаете ли вы значение всех используемых цветов? | Да | Нет |
+| Понимаете ли вы значение всех используемых форм? | Да | Нет |
+| Понимаете ли вы значение всех используемых значков? | Да | Нет |
+| Понимаете ли вы значение всех используемых значков? | Да | Нет |
+| Понимаете ли вы значение всех используемых стилей границ? (например, сплошные, пунктирные и т.д.) | Да | Нет |
+| Понимаете ли вы значение всех используемых размеров элементов? (например, маленькие или большие коробки) | Да | Нет |
 
-## Relationships
+## Отношения
 
-| Does every line have a label describing the intent of that relationship? | Yes | No |
-| Does the description match the relationship direction? | Yes | No |
-| Where applicable, do you understand the technology choices associated with every relationship? (e.g. protocols for inter-process communication) | Yes | No |
-| Do you understand the meaning of all acronyms and abbreviations used? | Yes | No |
-| Do you understand the meaning of all colours used? | Yes | No |
-| Do you understand the meaning of all arrow heads used? | Yes | No |
-| Do you understand the meaning of all line styles used? (e.g. solid, dashed, etc) | Yes | No |
+| Есть ли в каждой строке метка, описывающая цель этих отношений? | Да | Нет |
+| Соответствует ли описание направлению отношений? | Да | Нет |
+| Там, где это применимо, понимаете ли вы выбор технологий, связанных с каждым взаимодействием? (например, протоколы для межпроцессного взаимодействия) | Да | Нет |
+| Понимаете ли вы значение всех используемых сокращений? | Да | Нет |
+| Понимаете ли вы значение всех используемых цветов? | Да | Нет |
+| Вы понимаете значение всех используемых наконечников стрел? | Да | Нет |
+| Понимаете ли вы значение всех используемых стилей линий? (например, сплошных, пунктирных и т.д.) | Да | Нет |
