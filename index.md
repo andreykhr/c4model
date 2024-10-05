@@ -12,10 +12,10 @@ C4 модель является:
 
 1. Набором [иерархических абстракций](/abstractions) (software systems, containers, components, and code).
 2. Набором [иерархических диаграм](/diagrams) (system context, containers, components, and code).
-3. [Не зависимым от нотации](/diagrams/notation).
-4. [Не зависимым от инструментов](/tooling).
+3. [Независимым от нотации](/diagrams/notation).
+4. [Независимым от инструментов](/tooling).
 
-[![Обзок C4 модели для визуализации программной архитектуры](/images/c4-overview.png)](/images/c4-overview.png)
+[![Обзор C4 модели для визуализации программной архитектуры](/images/c4-overview.png)](/images/c4-overview.png)
 
 ## Использование и преимущества
 
