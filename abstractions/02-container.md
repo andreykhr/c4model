@@ -6,67 +6,78 @@ nav_order: 2
 permalink: /abstractions/container
 ---
 
-# Container
+# Контейнер
 
-Not Docker! In the C4 model, a container represents an __application__ or a __data store__. A container is something
-that needs to be running in order for the overall software system to work. In real terms, a container is something like:
+Не Docker! В модели C4 контейнер представляет собой приложение или хранилище данных. Контейнер - это то, что должно быть
+запущено для работы всей программной системы. В реальном выражении контейнер - это что-то вроде:
 
-- __Server-side web application__: A Java EE web application running on Apache Tomcat, an ASP.NET MVC application running on Microsoft IIS, a Ruby on Rails application running on WEBrick, a Node.js application, etc.
-- __Client-side web application__: A JavaScript application running in a web browser using Angular, Backbone.JS, jQuery, etc.
-- __Client-side desktop application__: A Windows desktop application written using WPF, an OS X desktop application written using Objective-C, a cross-platform desktop application written using JavaFX, etc.
-- __Mobile app__: An Apple iOS app, an Android app, a Microsoft Windows Phone app, etc.
-- __Server-side console application__: A standalone (e.g. "public static void main") application, a batch process, etc.
-- __Serverless function__: A single serverless function (e.g. Amazon Lambda, Azure Function, etc).
-- __Database__: A schema or database in a relational database management system, document store, graph database, etc such as MySQL, Microsoft SQL Server, Oracle Database, MongoDB, Riak, Cassandra, Neo4j, etc.
-- __Blob or content store__: A blob store (e.g. Amazon S3, Microsoft Azure Blob Storage, etc) or content delivery network (e.g. Akamai, Amazon CloudFront, etc).
-- __File system__: A full local file system or a portion of a larger networked file system (e.g. SAN, NAS, etc).
-- __Shell script__: A single shell script written in Bash, etc.
-- etc
+- __Серверное веб-приложение__: веб-приложение Java EE, работающее на Apache Tomcat, ASP.NET Приложение MVC, работающее 
+на Microsoft IIS, приложение Ruby on Rails, работающее на WEBrick, Node.js приложение и т.д.
+- __Веб-приложение на стороне клиента__: приложение на JavaScript, работающее в веб-браузере с использованием Angular, 
+Backbone.JS, jQuery и т.д.
+- __Клиентское настольное приложение__: настольное приложение для Windows, написанное с использованием WPF, настольное 
+приложение для OS X, написанное с использованием Objective-C, кроссплатформенное настольное приложение, написанное с 
+использованием JavaFX, и т.д.
+- __Мобильное приложение__: приложение для Apple iOS, приложение для Android, приложение для Microsoft Windows Phone 
+и т.д.
+- __Серверное консольное приложение__: автономное приложение (например, "общедоступное статическое основное приложение 
+с пустым файлом"), пакетный процесс и т.д.
+- __Бессерверная функция__: одна бессерверная функция (например, Amazon Lambda, функция Azure и т.д.).
+- __База данных__: схема или база данных в системе управления реляционными базами данных, хранилище документов, 
+графической базе данных и т.д., таких как MySQL, Microsoft SQL Server, Oracle Database, MongoDB, Riak, Cassandra, Neo4j 
+и т.д.
+- __Хранилище больших двоичных объектов или контента__: Хранилище больших двоичных объектов (например, Amazon S3, 
+Microsoft Azure Blob Storage и т.д.) или сеть доставки контента (например, Akamai, Amazon CloudFront и т.д.).
+- __Файловая система__: полная локальная файловая система или часть более крупной сетевой файловой системы (например, 
+SAN, NAS и т.д.).
+- __Shell script__: отдельный shell-скрипт, написанный на Bash и т.д.
+- и так далее
 
-A container is essentially a runtime boundary around some code that is being executed or some data that is being stored.
-The name "container" was chosen because I wanted a name that didn't imply anything about the physical nature of how
-that container is executed. For example, a single Java EE server like Apache Tomcat can run multiple web
-applications inside a single Java Virtual Machine, although each of those web applications is essentially isolated
-from the others. At development time I might have three web applications running on a single Apache Tomcat server,
-while each web application may be deployed onto a dedicated Apache Tomcat server in a live environment.
-In this situation, each web application is a "C4 container", with the deployment being a seperate concern.
+Контейнер - это, по сути, граница среды выполнения, ограничивающая некоторый выполняемый код или некоторые сохраняемые 
+данные. Название "контейнер" было выбрано потому, что я хотел, чтобы название ничего не указывало на физическую природу 
+того, как выполняется этот контейнер. Например, один сервер Java EE, такой, как Apache Tomcat, может запускать несколько 
+веб-приложений, внутри одной виртуальной машины Java, хотя каждое из этих веб-приложений по существу изолировано
+от других. На этапе разработки у меня может быть три веб-приложения, запущенных на одном сервере Apache Tomcat,
+в то время как каждое веб-приложение может быть развернуто на выделенном сервере Apache Tomcat в рабочей среде.
+В этой ситуации каждое веб-приложение представляет собой "контейнер C4", а развертывание является отдельной задачей.
 
-## FAQ
+## ЧаВо
 
-### Why "container"?
+### Почему "контейнер"?
 
-Terms like "process", "application", "app", "server", "deployable unit", etc all have associated implications, so the
-name "container" was chosen as a generic way to describe something in which components live. From one perspective,
-it's unfortunate that containerisation has become popular, because many software developers now associate the term
-"container" with Docker. From another perspective though, there is sometimes a nice parity between a container in the
-C4 model and an infrastructure (e.g. Docker) container.
+Такие термины, как "процесс", "приложение", "app", "сервер", "развертываемый модуль" и т.д., имеют соответствующие 
+значения, поэтому название "контейнер" было выбрано как общий способ описания чего-либо, в чем находятся компоненты. 
+С одной стороны, прискорбно, что контейнеризация стала популярной, потому что многие разработчики программного 
+обеспечения теперь ассоциируют термин "контейнер" с Docker. С другой стороны, иногда существует хорошее соотношение 
+между контейнером в модели C4 и инфраструктуре (например, Docker контейнер).
 
-While many teams successfully use the C4 model as is, feel free to change the terminology if needed.
+Хотя многие команды успешно используют модель C4 как есть, при необходимости вы можете изменить терминологию.
 
-### Web applications; one container or two?
+### Веб-приложения: один контейнер или два?
 
-If you're building a server-side web application (e.g. Spring MVC, ASP.NET, Ruby on Rails, Django, etc) that is
-predominantly generating static HTML content, then that's a single container. If there's a significant quantity of
-JavaScript being delivered by the server-side web application (e.g. a single-page application built using Angular),
-then that's two containers.
+Если вы создаете серверное веб-приложение (например, Spring MVC, ASP.NET, Ruby on Rails, Django и т.д.), которое
+преимущественно генерирует статический HTML-контент, тогда это единый контейнер. Если имеется значительное количество
+JavaScript, предоставляемый серверным веб-приложением (например, одностраничным приложением, созданным с использованием
+Angular), тогда это два контейнера.
 
-Although, at deployment time, the server-side web application includes both the server-side and client-side code,
-treating the client and server as two separate containers makes it explicit that these are two separate process spaces,
-communicating via an inter-process/remote communication mechanism (e.g. JSON/HTTPS). It also provides a basis for
-zooming in to each container separately to show the components inside them.
+Хотя во время развертывания серверное веб-приложение включает в себя как серверный, так и клиентский код,
+рассмотрение клиента и сервера как двух отдельных контейнеров явно указывает на то, что это два отдельных пространства 
+процессов, взаимодействующих через механизм межпроцессной/удаленной связи (например, JSON/HTTPS). Это также 
+обеспечивает основу для увеличения масштаба каждого контейнера в отдельности, чтобы показать компоненты внутри них.
 
-### Is a Java JAR, C# assembly, DLL, module, etc a container?
+### Является ли Java JAR, сборка C#, библиотека DLL, модуль и т.д. контейнером?
 
-Typically not. A container is a runtime construct, like an application; whereas Java JAR files, C# assemblies,
-DLLs, modules, etc are used to organise the code within those applications.
+Как правило, нет. Контейнер - это конструкция среды выполнения, подобная приложению; в то время как файлы Java JAR, 
+сборки C#, библиотеки DLL, модули и т.д. используются для организации кода в этих приложениях.
 
-### Should data storage services be shown as software systems or containers?
+### Следует ли представлять службы хранения данных в виде программных систем или контейнеров?
 
-A frequently asked question is whether services like Amazon S3, Amazon RDS, Azure SQL Database, content delivery
-networks, etc should be shown as software systems or containers. After all, these are external services that most
-of us don't own or run ourselves.
+Часто задаваемый вопрос заключается в том, должны ли такие сервисы, как Amazon S3, Amazon RDS, база данных SQL Azure,
+сети доставки контента и т.д., отображаться как программные системы или контейнеры. В конце концов, это внешние сервисы,
+которыми большинство из нас не владеет и не управляет самостоятельно.
 
-If you're building a software system that is using Amazon S3 for storing data, it's true that you don't run S3 yourself,
-but you do have ownership and responsibility for the buckets you are using. Similarly with Amazon RDS, you have
-(more or less) complete control over any database schemas that you create. For this reason, treat them as containers
-because they are an integral part of your software architecture, although they are hosted elsewhere.
+Если вы создаете программную систему, использующую Amazon S3 для хранения данных, это правда, что вы не запускаете S3 
+самостоятельно, но у вас есть право собственности и ответственность за используемые корзины. Аналогично с Amazon RDS, 
+у вас есть (более или менее) полный контроль над любыми создаваемыми вами схемами баз данных. По этой причине относитесь
+к ним как к контейнерам, поскольку они являются неотъемлемой частью архитектуры вашего программного обеспечения, хотя и
+размещены в другом месте.
