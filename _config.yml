@@ -14,3 +14,5 @@ gh_edit_link_text: "Изменить эту страницу на GitHub."
 gh_edit_repository: "https://github.com/andreykhr/c4model"
 gh_edit_branch: "master"
 gh_edit_view_mode: "tree"
+
+search_enabled: false
