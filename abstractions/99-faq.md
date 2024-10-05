@@ -8,58 +8,62 @@ permalink: /abstractions/faq
 
 # Часто задаваемые вопросы
 
-## Can we change the terminology?
+## Можем ли мы изменить терминологию?
 
-This terminology (context, containers, components and code) works for many organisations and many types of software. 
-However, sometimes an organisation will have an existing terminology that people are already familiar with. Or perhaps 
-"components" and "classes" don't easily map on to the technology being used (e.g. functional languages often use the 
-terms "module" and "function").
+Эта терминология (контекст, контейнеры, компоненты и код) применима ко многим организациям и многим типам программного
+обеспечения. Однако иногда в организации используется существующая терминология, с которой люди уже знакомы. Или, 
+возможно, "компоненты" и "классы" нелегко соотнести с используемой технологией (например, в функциональных языках часто
+используются термины "модуль" и "функция").
 
-Feel free to modify the terminology that you use to describe software architecture at different levels of abstraction. 
-Just make sure that everybody explicitly understands it.
+Не стесняйтесь изменять терминологию, которую вы используете для описания архитектуры программного обеспечения на разных
+уровнях абстракции. Просто убедитесь, что это понятно всем.
 
-## Can we add more abstraction levels?
+## Можем ли мы добавить больше уровней абстракции?
 
-> "A database is a database; debating whether it is also a Container or a Component just isn’t worthwhile."
+> "База данных - это база данных; спорить о том, является ли она также контейнером или компонентом, просто не имеет 
+> смысла".
 
-This quote, from a [blog post](https://www.ilograph.com/blog/posts/concrete-diagramming-models/), raises a couple of interesting questions about the C4 model:
+Эта цитата из [записи в блоге] (https://www.ilograph.com/blog/posts/concrete-diagramming-models/) поднимает пару
+интересных вопросов о модели C4:
 
-1. Are the four levels of abstraction too limited?
-2. Can we add more levels of abstraction?
+1. Не слишком ли ограничены четыре уровня абстракции?
+2. Можем ли мы добавить больше уровней абстракции?
 
-Modern software systems are comprised of many different types of compile-time, runtime, deployment, and infrastructure 
-building blocks. With this in mind, it can sometimes be difficult to categorise each of these into the various 
-abstractions that make up the C4 model. A seemingly easier approach is to just add more levels of abstraction as 
-required, rather than spending time debating whether a "database" is a container or a component.
+Современные программные системы состоят из множества различных типов компонентов времени компиляции, среды выполнения, 
+развертывания и инфраструктуры. Учитывая это, иногда бывает трудно отнести каждый из них к различным абстракциям,
+составляющим модель C4. Казалось бы, более простой подход заключается в том, чтобы просто добавить дополнительные уровни
+абстракции по мере необходимости, вместо того чтобы тратить время на обсуждение того, является ли "база данных" 
+контейнером или компонентом.
 
-The problem here is that we're often too imprecise with the terminology that we use in our day-to-day work,
-which leads us to make the wrong decisions when trying to categorise the building blocks that make up our software 
-systems. The word "database" is used in the quote above, but is it being used to refer to a 
-database server, a database schema, a collection of related data, or something else entirely?
-Why is this important? As an example, the definition of the word "database" dramatically affects the 
-meaning of the following statement:
+Проблема здесь в том, что мы часто слишком неточно используем терминологию в повседневной работе,
+что приводит нас к принятию неверных решений при попытке классифицировать строительные блоки, из которых состоят наши
+программные системы. В приведенной выше цитате использовано слово "база данных", но используется ли оно для обозначения
+сервера базы данных, схемы базы данных, набора связанных данных или чего-то совершенно другого?
+Почему это важно? Например, определение слова "база данных" существенно влияет на смысл следующего утверждения:
 
-> "microservices shouldn't share a database"
+> "микросервисы не должны совместно использовать базу данных"
 
-As an industry, we need to be more precise with the terminology that we use. Debating whether a database is a 
-container or a component forces you understand exactly what you mean by the word "database", before mapping it 
-onto the abstraction levels provided by the C4 model. The power of the C4 model is the small set of fixed/named 
-hierarchical abstractions that help teams reason about their software systems in a structured and more precise way,
-both within and across engineering teams.
+Как отрасль, мы должны быть более точны в терминологии, которую используем. Обсуждение того, является ли база
+данных контейнером или компонентом, требует от вас точного понимания того, что вы подразумеваете под словом 
+"база данных", прежде чем сопоставлять его с уровнями абстракции, предоставляемыми моделью C4. Преимущество модели C4
+заключается в небольшом наборе фиксированных/именованных иерархических абстракций, которые помогают командам более
+структурировано и точно оценивать свои программные системы как внутри инженерных групп, так и между ними.
 
 ![](/images/flexible-abstractions-1.png)
 
-Whenever teams say, "C4 is too limiting - we need more abstractions for more flexibility", it's usually for one
-of the following reasons:
+Всякий раз, когда команды говорят: "C4 слишком ограничивает - нам нужно больше абстракций для большей гибкости", это 
+обычно происходит по одной из следующих причин:
 
-- The team has misunderstood the C4 model and are misusing the abstraction levels, requiring more to be added.
-- Teams want to add more abstraction levels in order to model things that are really organisational constructs or groupings, rather than abstractions in their own right - subsystems, bounded contexts, layers, libraries, etc.
+- Команда неправильно поняла модель C4 и неправильно использует уровни абстракции, требуя добавить еще больше.
+- Команды хотят добавить больше уровней абстракции, чтобы моделировать вещи, которые на самом деле являются 
+организационными конструкциями или группировками, а не абстракциями сами по себе - подсистемы, ограниченные контексты,
+слои, библиотеки и т.д.
 
-Although the C4 model provides enough for most software development teams, you should certainly feel that you can add
-more abstraction levels if you have a genuine need. After all, the agile mindset tells us to "inspect and adapt" in 
-order to improve the way that we work. This should be seen an advanced manoeuvre though, and you should only consider 
-doing it if you're willing to put the effort into precisely defining those additional levels of abstraction.
-Failure to do so will ultimately lead you back to where we are today, with diagrams showing ad hoc abstractions 
-caused by an impreciseness of terminology.
+Хотя модели C4 достаточно для большинства команд разработчиков программного обеспечения, вы, безусловно, должны 
+понимать, что можете добавить больше уровней абстракции, если у вас есть реальная потребность. В конце концов, гибкое
+мышление предписывает нам "проверять и адаптировать", чтобы улучшить нашу работу. Однако это следует рассматривать как\
+продвинутый маневр, и вам следует рассмотреть его только в том случае, если вы готовы приложить усилия для точного 
+определения этих дополнительных уровней абстракции. Невыполнение этого требования в конечном итоге приведет вас к тому,
+что мы имеем сегодня, к диаграммам, показывающим специальные абстракции вызвано неточностью терминологии.
 
 ![](/images/flexible-abstractions-2.png)
