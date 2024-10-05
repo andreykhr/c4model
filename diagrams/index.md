@@ -7,26 +7,27 @@ permalink: /diagrams
 has_toc: false
 ---
 
-# Diagrams
+# Диаграммы
 
-## Static structure diagrams
+## Статические структурные схемы
 
-The C4 model is named after the core set of static structure diagrams:
-(system) context, containers, components, and code.
+Модель C4 названа в честь базового набора статических структурных диаграмм:(системный) контекст, контейнеры, компоненты
+и код.
 
 | ![](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/Containers.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/Components.png) | ![](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png) |
-| [1. System context diagram](/diagrams/system-context) | [2. Container diagram](/diagrams/container) | [3. Component diagram](/diagrams/component) | [4. Code diagram](/diagrams/code) |
+| [1. Диаграмма системного контекса](/diagrams/system-context) | [2. Диаграмма контейнеров](/diagrams/container) | [3. Диаграмма компонентов](/diagrams/component) | [4. Диаграмма кода](/diagrams/code) |
 
-The different levels of zoom allow you to tell different stories to different audiences.
-That said, __you don't need to use all 4 levels of diagram__; only those that add value -
-the [system context](/diagrams/system-context) and [container](/diagrams/container) diagrams are sufficient for most software development teams.
+Различные уровни масштабирования позволяют вам рассказывать разные истории разным аудиториям.
+Тем не менее, вам не нужно использовать все 4 уровня диаграммы; большинству команд разработчиков программного 
+обеспечения достаточно только тех, которые повышают ценность - диаграмм [системный контекст] (/diagrams/system-context) 
+и [контейнер] (/diagrams/container).
 
-## Supplementary diagrams
+## Дополнительные диаграммы
 
-In addition, there are 3 supplementary diagram types:
+Кроме того, существует 3 дополнительных типа диаграмм:
 
 | ![A system landscape diagram](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png) | ![A dynamic diagram](https://static.structurizr.com/workspace/36141/diagrams/SignIn.png) | ![A deployment diagram](https://static.structurizr.com/workspace/36141/diagrams/LiveDeployment.png) |
-| [System landscape diagram](/diagrams/system-landscape) | [Dynamic diagram](/diagrams/dynamic) | [Deployment diagram](/diagrams/deployment) |
+| [Диаграмма ландшафта](/diagrams/system-landscape) | [Динамическая диаграмма](/diagrams/dynamic) | [Диаграмма развертывания](/diagrams/deployment) |
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>
