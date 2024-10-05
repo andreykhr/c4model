@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FAQ
-parent: Diagrams
+parent: Диаграммы
 nav_order: 99
 permalink: /diagrams/faq
 ---

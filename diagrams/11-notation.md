@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Notation
-parent: Diagrams
+parent: Диаграммы
 nav_order: 11
 permalink: /diagrams/notation
 ---

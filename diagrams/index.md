@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diagrams
+title: Диаграммы
 nav_order: 4
 has_children: true
 permalink: /diagrams

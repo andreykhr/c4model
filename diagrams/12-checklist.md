@@ -2,6 +2,7 @@
 layout: default
 title: Review checklist
 parent: Diagrams
+parent: Диаграммы
 nav_order: 12
 permalink: /diagrams/checklist
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 2. Container diagram
-parent: Diagrams
+parent: Диаграммы
 nav_order: 2
 permalink: /diagrams/container
 ---
