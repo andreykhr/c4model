@@ -27,7 +27,7 @@ permalink: /diagrams/container
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)
 
-## Охват
+## Область видимости
 
 Отдельная программная система.
 

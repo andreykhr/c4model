@@ -25,7 +25,7 @@ permalink: /diagrams/system-context
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)
 
-## Охват
+## Область видимости
 
 Отдельная программная система
 

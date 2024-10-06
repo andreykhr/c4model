@@ -21,7 +21,7 @@ UML-моделирования), и вам следует рассмотреть
 
 [![A code diagram](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png)](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png)
 
-## Охват
+## Область видимости
 
 Отдельный компонент.
 

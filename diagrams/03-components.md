@@ -22,7 +22,7 @@ permalink: /diagrams/component
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/Components-key.png)](https://static.structurizr.com/workspace/36141/diagrams/Components-key.png)
 
-## Охват
+## Область видимости
 
 Отдельный контейнер.
 
