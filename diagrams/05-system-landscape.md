@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Диаграмма системного ландшафта
+title: Системный ландшафт
 parent: Диаграммы
 nav_order: 5
 permalink: /diagrams/system-landscape

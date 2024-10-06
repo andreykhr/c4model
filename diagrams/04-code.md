@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4. Диаграмма кода
+title: 4. Код
 parent: Диаграммы
 nav_order: 4
 permalink: /diagrams/code

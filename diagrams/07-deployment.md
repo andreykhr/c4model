@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Диаграмма развертывания
+title: Развертывания
 parent: Диаграммы
 nav_order: 7
 permalink: /diagrams/deployment

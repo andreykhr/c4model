@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Контрольный список проверки
+title: Контрольный список
 parent: Диаграммы
 nav_order: 12
 permalink: /diagrams/checklist

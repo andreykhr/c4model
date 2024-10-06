@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3. Диаграмма компонентов
+title: 3. Компоненты
 parent: Диаграммы
 nav_order: 3
 permalink: /diagrams/component

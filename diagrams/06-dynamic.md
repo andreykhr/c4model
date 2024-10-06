@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Динамическая диаграмма
+title: Динамическая
 parent: Диаграммы
 nav_order: 6
 permalink: /diagrams/dynamic

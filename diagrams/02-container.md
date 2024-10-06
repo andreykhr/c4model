@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2. Диаграмма контейнеров
+title: 2. Контейнеры
 parent: Диаграммы
 nav_order: 2
 permalink: /diagrams/container
