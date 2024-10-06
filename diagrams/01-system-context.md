@@ -1,50 +1,52 @@
 ---
 layout: default
-title: 1. System context diagram
+title: 1. Диаграмма системного контекста
 parent: Диаграммы
 nav_order: 1
 permalink: /diagrams/system-context
 ---
 
-# System context diagram
+# Диаграмма системного контекста
 
-A System Context diagram is a good starting point for diagramming and documenting a software system, allowing you to
-step back and see the big picture. Draw a diagram showing your system as a box in the centre, surrounded by its users
-and the other systems that it interacts with.
+Системная контекстная диаграмма - это хорошая отправная точка для построения схем и документирования программной системы,
+позволяющая вам сделать шаг назад и увидеть картину в целом. Нарисуйте схему, на которой ваша система будет представлена
+в виде прямоугольника в центре, окруженного пользователями и другими системами, с которыми она взаимодействует.
 
-Detail isn't important here as this is your zoomed out view showing a big picture of the system landscape. The focus
-should be on people (actors, roles, personas, etc) and software systems rather than technologies, protocols and other
-low-level details. It's the sort of diagram that you could show to non-technical people.
+Детали здесь не важны, так как это увеличенное изображение, показывающее общую картину системного ландшафта. 
+Основное внимание следует уделять людям (действующим лицам, ролям, персонажам и т.д.) и программным системам, а не 
+технологиям, протоколам и прочему детали низкого уровня. Это своего рода диаграмма, которую вы могли бы показать людям,
+не имеющим технического образования.
 
-## Example
+## Пример
 
 [![A System Context diagram](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)
 
-## Scope
+## Рамка
 
-A single software system.
+Единичная программная система
 
-## Primary elements
+## Первичные элементы
 
-The software system in scope.
+Программная система в рамках.
 
-## Supporting elements
+## Опорные элементы
 
-People (e.g. users, actors, roles, or personas) and software systems (external dependencies) that are directly connected
-to the software system in scope. Typically these other software systems sit outside the scope or boundary of your
-own software system, and you don't have responsibility or ownership of them.
+Люди (например, пользователи, действующие лица, роли или персоны) и программные системы (внешние зависимости), которые
+непосредственно связаны с программной системой по своему охвату. Как правило, эти другие программные системы находятся
+за пределами вашей собственной программной системы, и вы не несете за них ответственности и не являетесь владельцем.
 
-## Intended audience
+## Целевая аудитория
 
-Everybody, both technical and non-technical people, inside and outside the software development team.
+Все, как технические, так и нетехнические специалисты, как внутри команды разработчиков программного обеспечения, 
+так и за ее пределами.
 
-## Recommended?
+## Рекомендовано?
 
-Yes, a system context diagram is recommended for all software development teams.
+Да, системная контекстная диаграмма рекомендуется для всех групп разработчиков программного обеспечения.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>
