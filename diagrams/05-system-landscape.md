@@ -1,43 +1,43 @@
 ---
 layout: default
-title: System landscape diagram
+title: Диаграмма системного ландшафта
 parent: Диаграммы
 nav_order: 5
 permalink: /diagrams/system-landscape
 ---
 
-# System landscape diagram
+# Диаграмма системного ландшафта 
 
-The system context, container, component, and code diagrams are designed to provide a static view of
-a __single software system__ but, in the real-world, software systems never live in isolation. For this reason,
-and particularly if you are responsible for a collection/portfolio of software systems,
-it's often useful to understand how all of these software systems fit together within a given enterprise, 
-organisation, department, etc. Essentially this is a map of the software systems within the chosen scope, with a
-set of system context, container, component, and code diagrams for each software system of interest.
+Системный контекст, контейнер, диаграммы компонентов и кода предназначены для обеспечения статического представления
+__отдельной программной системы__, но в реальном мире программные системы никогда не существуют изолированно. По этой 
+причине, особенно если вы отвечаете за коллекцию/портфолио программных систем, часто бывает полезно понять, как все эти
+программные системы сочетаются друг с другом на данном предприятии, в организации, отделе и т.д. По сути, это карта 
+программных систем в выбранной области, с набором системных контекстов, контейнеров, компонентов и диаграмм кода для 
+каждой интересующей программной системы.
 
-From a practical perspective, a system landscape diagram is really just a system context diagram without a
-specific focus on a particular software system.
+С практической точки зрения, диаграмма системного ландшафта - это на самом деле просто диаграмма системного контекста без
+особого внимания к конкретной программной системе.
 
-## Example
+## Пример
 
 [![A system landscape diagram](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)](https://static.structurizr.com/workspace/28201/diagrams/SystemLandscape-key.png)
 
-## Scope
+## Область видимости
 
-An enterprise/organisation/department/etc.
+Предприятие/организация/отдел/и т.д.
 
-## Primary elements
+## Первичные элементы
 
-People and software systems related to the chosen scope.
+Люди и программные системы, относящиеся к выбранной области.
 
-## Intended audience
+## Целевая аудитория
 
-Technical and non-technical people, inside and outside the software development team.
+Технические и нетехнические специалисты, как внутри команды разработчиков программного обеспечения, так и за ее пределами.
 
-## Recommended?
+## Рекомендовано?
 
-Yes, particularly for larger organisations - it's a bridge into the enterprise architecture world.
+Да, особенно для крупных организаций - это мост в мир корпоративной архитектуры.
