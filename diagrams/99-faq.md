@@ -1,61 +1,62 @@
 ---
 layout: default
-title: FAQ
+title: ЧаВо
 parent: Диаграммы
 nav_order: 99
 permalink: /diagrams/faq
 ---
 
-# Frequently asked questions
+# Часто задаваемые вопросы
 
-## Should the lines represent dependencies or data flow?
+## Должны ли строки представлять зависимости или поток данных?
 
-This is your choice. Sometimes diagrams work better showing dependency relationships (e.g. uses, reads from, etc),
-and sometimes data flow (e.g. customer update events) works better. Whichever you choose, make sure that the
-description of the line matches the direction of the arrow.
+Это ваш выбор. Иногда лучше работают диаграммы, показывающие взаимосвязи зависимостей (например, использование, чтение
+из и т.д.), а иногда лучше работает поток данных (например, события обновления клиента). Что бы вы ни выбрали, убедитесь,
+что описание линии совпадает с направлением стрелки.
 
-It's also worth remembering that most relationships can be expressed either way, and the more explicit you can be,
-the better. For example, describing a relationship as "sends customer update events to" can be more descriptive
-than simply "customer update events".
+Также стоит помнить, что большинство взаимосвязей могут быть выражены любым способом, и чем более четко вы их
+сформулируете, тем лучше. Например, описание взаимосвязи как "отправляет события обновления клиентов в" может быть
+более наглядным, чем просто "события обновления клиентов".
 
-## Will the diagrams become outdated quickly?
+## Будут ли диаграммы быстро устаревать?
 
-Due to the hierarchical nature of the C4 model, each diagram will change at a different rate.
+Из-за иерархической природы модели C4 каждая диаграмма будет меняться с разной скоростью.
 
-- __System context diagram__: In most cases, the system context diagram will change very slowly, as this describes the 
-landscape that the software system is operating within.
-- __Container diagram__: Unless you're building a software system that makes heavy use of microservices or serverless 
-lambdas/functions/etc, the container diagram will also change relatively slowly.
-- __Component diagram__: For any software system under active development, the component diagrams may change frequently 
-as the team adds, removes or restructures the code into cohesive components.
-- __Code diagram__: The level 4 code (e.g. class) diagrams will potentially become outdated very quickly if the codebase is
-under active development. For this reason, the recommendation is to (1) not create them at all or (2) generate them 
-on-demand using tooling such as your IDE.
+- __Диаграмма системного контекста__: В большинстве случаев диаграмма системного контекста меняется очень медленно,
+поскольку она описывает ландшафт, в котором работает программная система.
+- __Диаграмма контейнера__: Если вы не создаете программную систему, в которой широко используются микросервисы или
+бессерверные лямбда-выражения/функции и т.д., диаграмма контейнера также будет меняться относительно медленно.
+- __Диаграмма компонентов__: Для любой программной системы, находящейся в стадии активной разработки, диаграммы
+компонентов могут часто меняться по мере того, как команда добавляет, удаляет или перестраивает код в связные компоненты.
+- __Диаграмма кода__: Диаграммы кода уровня 4 (например, класса) потенциально могут очень быстро устареть, если кодовая
+база находится в стадии активной разработки. По этой причине рекомендуется (1) не создавать их вообще или (2) генерировать
+их на лету используя инструменты такие как IDE.
 
-Of course, the above only applies when you are creating your C4 diagrams by hand.
-Automatically generating your diagrams will ensure they are kept up to date and reflect reality at all times.
-Possible approaches to do this include:
+Разумеется, вышесказанное применимо только в том случае, если вы создаете свои диаграммы C4 вручную.
+Автоматическое создание ваших диаграмм гарантирует, что они всегда будут актуальными и будут отражать реальность.
+Возможные подходы к этому включают:
 
-- __System landscape/context diagrams__: Using existing system/service catalogs (e.g. Backstage, ServiceNow, etc) as a source of data for identifying software systems and relationships.
-- __Container diagrams__: Parsing log files or using OpenTelemetry data as a source of data for identifying microservices and relationships.
-- __Component diagrams__: Static analysis/reverse-engineering of code as a source of data for identifying components and their relationships.
-- __Deployment diagrams__: Parsing "infrastructure as code" definitions (e.g. Terraform, CloudFormation, etc) or reverse-engineering cloud environment configuration as a source of data for identifying deployment elements.
+- __Системный ландшафт/контекстные диаграммы__: Использование существующих каталогов систем/сервисов (например, Backstage, ServiceNow и т.д.) в качестве источника данных для идентификации программных систем и взаимосвязей.
+- __Диаграммы контейнеров__: Анализ файлов журналов или использование данных OpenTelemetry в качестве источника данных для идентификации микросервисов и взаимосвязей.
+- __Диаграммы компонентов__: Статический анализ/реверс-инжиниринг кода как источника данных для идентификации компонентов и их взаимосвязей.
+- __Диаграммы развертывания__: Анализ определений "инфраструктура как код" (например, Terraform, CloudFormation и т.д.) или обратное проектирование конфигурации облачной среды в качестве источника данных для идентификации элементов развертывания.
 
-## The C4 model vs UML, ArchiMate and SysML?
+## Модель C4 против UML, ArchiMate и SysML?
 
-Although existing notations such as UML, ArchiMate and SysML already exist, many software development teams don't 
-seem to use them. Often this is because teams don't know these notations well enough, perceive them to be too 
-complicated, think they are not compatible with agile approaches or don't have the required tooling.
+Хотя существующие нотации, такие как UML, ArchiMate и SysML, уже существуют, многие команды разработчиков программного
+обеспечения, похоже, их не используют. Часто это происходит из-за того, что команды недостаточно хорошо знают эти
+обозначения, считают их слишком сложными, считают, что они несовместимы с гибкими подходами или не имеют необходимого
+инструментария.
 
-If you are already successfully using one of these notations to communicate software architecture, and it's working, 
-stick with it. If not, try the C4 model. And don't be afraid to supplement the C4 diagrams with UML state diagrams, 
-timing diagrams, etc if you need to.
+Если вы уже успешно используете одну из этих нотаций для описания архитектуры программного обеспечения и оно работает,
+придерживайтесь его. Если нет, попробуйте модель C4. И не бойтесь дополнять диаграммы C4 диаграммами состояний UML,
+временными диаграммами и т.д., если это необходимо.
 
-## Can we combine C4 and arc42?
+## Можем ли мы объединить C4 и arc42?
 
-Yes, many teams do, and the C4 model is compatible with the [arc42 documentation template](http://arc42.org) as follows.
+Да, многие команды делают это, и модель C4 совместима с [шаблоном документации arc 42](http://arc42.org) следующим образом.
 
-- Context and Scope => System Context diagram
-- Building Block View (level 1) => Container diagram
-- Building Block View (level 2) => Component diagram
-- Building Block View (level 3) => Code (e.g. class) diagram
+- Контекст и область применения => Диаграмма системного контекста
+- Просмотр строительных блоков (уровень 1) => Схема контейнера
+- Просмотр строительных блоков (уровень 2) => Схема компонентов
+- Представление структурного блока (уровень 3) => Схема кода (например, класса)
