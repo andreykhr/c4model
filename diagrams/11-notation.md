@@ -1,97 +1,104 @@
 ---
 layout: default
-title: Notation
+title: Нотация
 parent: Диаграммы
 nav_order: 11
 permalink: /diagrams/notation
 ---
 
-# Notation
+# Нотация
 
-The C4 model is __notation independent__, and doesn't prescribe any particular notation. As a starting point though,
-a simple notation that works well on whiteboards, paper, sticky notes, index cards and a variety of
-diagramming tools is as follows.
+Модель C4 не зависит от нотации и не предписывает каких-либо конкретных обозначений. Однако в качестве отправной точки
+можно использовать простую нотацию, которая хорошо работает на досках, бумаге, стикерах, картотеках и различных
+инструментах построения диаграмм.
 
-You can then use colour and shapes to supplement the diagram, either to add additional information
-or to make the diagram more aesthetically pleasing. Although you may see many example diagrams and tools that make
-use of blue and grey boxes<sup>1</sup>, this __isn't__ something that is dictated by the C4 model, and you are free to use whatever
-colours you like!
+Затем вы можете использовать цвет и формы для дополнения диаграммы, либо для добавления дополнительной информации, либо
+для придания диаграмме более эстетичного вида. Хотя вы можете увидеть множество примеров диаграмм и инструментов, в 
+которых используются синие и серые прямоугольники<sup>1</sup>, это не то, что диктуется моделью C4, и вы можете 
+использовать какие угодно цвета, которые вам нравятся!
 
-## Elements
+## Элементы
 
 | [![Person](/images/notation-person.png)](/images/notation-person.png) | [![Software system](/images/notation-software-system.png)](/images/notation-software-system.png) |
 | [![Container](/images/notation-container.png)](/images/notation-container.png) | [![Component](/images/notation-component.png)](/images/notation-component.png) |
 
-Notice that each box includes the element/abstraction type (`Person`, `Software System`, `Container`, `Component`) -
-this is a purposeful decision and helps remove any ambiguity about which level of abstraction is being shown. 
+Обратите внимание, что в каждом поле указан тип элемента/абстракции ("Человек", "Программная система", "Контейнер", 
+"Компонент") - это целенаправленное решение, которое помогает устранить любую двусмысленность в отношении того, какой
+уровень абстракции отображается.
 
-## Relationships
+## Отношения
 
 | [![Relationship](/images/notation-relationship.png)](/images/notation-relationship.png) |
 
-## Diagram key/legend
+### Легенда диаграммы
 
-Any notation used should be as self-describing as possible, but all diagrams should have a key/legend to make the
-notation explicit. This applies to diagrams created with notations such as UML, ArchiMate and SysML too,
-as not everybody will know the notation being used.
+Любая используемая нотация должна быть настолько понятной, насколько это возможно, но все диаграммы должны иметь 
+легенду с обозначениями, чтобы сделать нотацию понятной. Это относится и к диаграммам, созданным с использованием таких
+обозначений, как UML, ArchiMate и SysML, поскольку не все будут знать используемую нотацию.
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)
 
-## Notation, notation, notation
+## Нотация, нотация, нотация
 
-Although the C4 model is an abstraction-first approach and notation independent, you still need to ensure that your
-diagram notation makes sense, and that the diagrams are comprehensible. A good way to think about this is to ask
-yourself whether each diagram can stand alone, and be (mostly) understood without a narrative. You can use this short
-[software architecture diagram review checklist](/diagrams/checklist) to help.
+Несмотря на то, что модель C4 основана на абстракции и не зависит от нотации, вам все равно необходимо убедиться, что 
+ваши обозначения на диаграммах имеют смысл и что диаграммы понятны. Хороший способ поразмыслить над этим - спросить
+себя, может ли каждая диаграмма быть самостоятельной и понятной (в основном) без пояснений. Вы можете воспользоваться 
+этим кратким обзором [контрольный список для проверки диаграмм архитектуры программного обеспечения](/diagrams/checklist),
+чтобы помочь.
 
-Here are some general recommendations related to notation.
+Вот несколько общих рекомендаций, связанных с обозначениями.
 
-### Diagrams
+### Диаграммы
 
-- Every diagram should have a title describing the diagram type and scope (e.g. "System Context diagram for My Software System").
-- Every diagram should have a key/legend explaining the notation being used (e.g. shapes, colours, border styles, line types, arrow heads, etc).
-- Acronyms and abbreviations (business/domain or technology) should be understandable by all audiences, or explained in the diagram key/legend.
+- Каждая диаграмма должна иметь заголовок, описывающий тип диаграммы и область ее применения (например, "Диаграмма системного контекста для моей программной системы").
+- Каждая диаграмма должна иметь легенду, объясняющую используемые обозначения (например, формы, цвета, стили границ, типы линий, начертания стрелок и т.д.).
+- Акронимы и сокращения (бизнес/домен или технология) должны быть понятны всем аудиториям или объясняться в ключе/условных обозначениях диаграммы.
 
-### Elements
+### Элементы
 
-- The type of every element should be explicitly specified (e.g. Person, Software System, Container or Component).
-- Every element should have a short description, to provide an "at a glance" view of key responsibilities.
-- Every container and component should have a technology explicitly specified.
+- Тип каждого элемента должен быть четко указан (например, Человек, Программная система, контейнер или компонент).
+- Каждый элемент должен иметь краткое описание, чтобы обеспечить "беглым взглядом" представление о ключевых обязанностях.
+- Для каждого контейнера и компонента должна быть четко указана технология.
 
-### Relationships
+### Отношения
 
-- Every line should represent a unidirectional relationship.
-- Every line should be labelled, the label being consistent with the direction and intent of the relationship (e.g. dependency or data flow). Try to be as specific as possible with the label, ideally avoiding single words like, "Uses".
-- Relationships between containers (typically these represent inter-process communication) should have a technology/protocol explicitly labelled.
+- Каждая линия должна представлять собой однонаправленную связь.
+- Каждая строка должна быть помечена так, чтобы она соответствовала направлению и цели взаимосвязи (например, зависимости или потоку данных). Старайтесь использовать как можно более конкретную маркировку, в идеале избегая отдельных слов, таких как "Использование".
+- Отношения между контейнерами (обычно они представляют собой межпроцессное взаимодействие) должны быть четко обозначены технологией/протоколом.
 
-## C4 and UML
+## C4 и UML
 
-Although the example diagrams are created using a "boxes and lines" notation, the core diagrams can be illustrated
-using UML with the appropriate use of packages, components and stereotypes. The resulting UML diagrams do
-tend to lack the same degree of descriptive text though, because adding such text isn't possible (or easy)
-with some UML tools.
+Хотя примеры диаграмм созданы с использованием нотации "прямоугольники и линии", основные диаграммы могут быть проиллюстрированы
+с помощью UML с соответствующим использованием пакетов, компонентов и стереотипов. Однако результирующим диаграммам UML,
+как правило, не хватает такого же количества описательного текста, поскольку добавить такой текст невозможно (или просто)
+с помощью некоторых инструментов UML.
 
-Here are three examples of a system context, container and component diagram for comparison.
+Вот три примера системного контекста, контейнера и схемы компонентов для сравнения.
 
-| System context diagram | Container diagram | Component diagram |
-| [![System context diagram](/images/spring-petclinic-system-context.png)](/images/spring-petclinic-system-context.png) | [![Container diagram](/images/spring-petclinic-containers.png)](/images/spring-petclinic-containers.png) | [![Component diagram](/images/spring-petclinic-components.png)](/images/spring-petclinic-components.png) |
+| System context diagram                                                                                                                  | Container diagram                                                                                                          | Component diagram                                                                                                          |
+|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| [![System context diagram](/images/spring-petclinic-system-context.png)](/images/spring-petclinic-system-context.png)                   | [![Container diagram](/images/spring-petclinic-containers.png)](/images/spring-petclinic-containers.png)                   | [![Component diagram](/images/spring-petclinic-components.png)](/images/spring-petclinic-components.png)                   |
 | [![System context diagram](/images/spring-petclinic-system-context-plantuml.png)](/images/spring-petclinic-system-context-plantuml.png) | [![Container diagram](/images/spring-petclinic-containers-plantuml.png)](/images/spring-petclinic-containers-plantuml.png) | [![Component diagram](/images/spring-petclinic-components-plantuml.png)](/images/spring-petclinic-components-plantuml.png) |
-| [![System context diagram](/images/spring-petclinic-system-context-staruml.png)](/images/spring-petclinic-system-context-staruml.png) | [![Container diagram](/images/spring-petclinic-containers-staruml.png)](/images/spring-petclinic-containers-staruml.png) | [![Component diagram](/images/spring-petclinic-components-staruml.png)](/images/spring-petclinic-components-staruml.png) |
+| [![System context diagram](/images/spring-petclinic-system-context-staruml.png)](/images/spring-petclinic-system-context-staruml.png)   | [![Container diagram](/images/spring-petclinic-containers-staruml.png)](/images/spring-petclinic-containers-staruml.png)   | [![Component diagram](/images/spring-petclinic-components-staruml.png)](/images/spring-petclinic-components-staruml.png)   |
 
-## C4 and ArchiMate
 
-See [C4 Model, Architecture Viewpoint and Archi 4.7](https://www.archimatetool.com/blog/2020/04/18/c4-model-architecture-viewpoint-and-archi-4-7/) for details of how to create C4 model diagrams with ArchiMate.
+## C4 и ArchiMate
 
-## Alternative visualisations
+Смотрите [C4 Model, Architecture Viewpoint и Archi 4.7](https://www.archimatetool.com/blog/2020/04/18/c4-model-architecture-viewpoint-and-archi-4-7/)
+для получения подробной информации о том, как создавать диаграммы моделей C4 с помощью ArchiMate.
 
-Finally, don't feel that you need to always use a traditional "boxes and arrows" diagram.
-Although this is usually the default approach, there are other, often interactive, visualisations that can be
-used to show the same C4 model abstractions in very different ways.
+## Альтернативные визуализации
 
-| [![](/images/alternative-1.png)](https://structurizr.com/dsl?example=microservices) |  [![](/images/alternative-2.png)](https://structurizr.com/dsl?example=microservices&renderer=graph) |  [![](/images/alternative-3.png)](https://structurizr.com/dsl?example=microservices&renderer=ilograph) |
+Наконец, не думайте, что вам всегда нужно использовать традиционную диаграмму в виде прямоугольников и стрелок.
+Хотя обычно это стандартный подход, существуют и другие, часто интерактивные, визуализации, которые можно
+использовать для отображения одних и тех же абстракций модели C4 совершенно разными способами.
+
+
+| [![](/images/alternative-1.png)](https://structurizr.com/dsl?example=microservices)                   | [![](/images/alternative-2.png)](https://structurizr.com/dsl?example=microservices&renderer=graph)                                                 | [![](/images/alternative-3.png)](https://structurizr.com/dsl?example=microservices&renderer=ilograph)                                          |
 | Traditional "boxes and arrows" diagrams are the default approach for documentation and presentations. | A D3.js force-directed graph is a very concise way to visualise larger software architectures, also providing an easy way to explore dependencies. | Ilograph's interactive diagrams provide a way to selectively zoom in and out, allowing you to explore your entire software architecture model. |
 
-- <sup>1</sup> "C4 = blue and grey boxes" is a common misconception, which is why the example diagrams presented on this website now cycle between blue, green, and red versions!
+- <sup>1</sup> "C4 = синие и серые прямоугольники" - распространенное заблуждение, поэтому примеры диаграмм,
+представленные на этом веб-сайте, теперь чередуются между синей, зеленой и красной версиями!
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>
