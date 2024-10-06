@@ -1,47 +1,48 @@
 ---
 layout: default
-title: 3. Component diagram
+title: 3. Диаграмма компонентов
 parent: Диаграммы
 nav_order: 3
 permalink: /diagrams/component
 ---
 
-# Component diagram
+# Диаграмма компонентов
 
-Next you can zoom in and decompose each container further to identify the major structural building blocks and their
-interactions.
+Затем вы можете увеличить масштаб и разложить каждый контейнер еще больше, чтобы определить основные структурные 
+элементы и их взаимодействие.
 
-The Component diagram shows how a container is made up of a number of "components", what each of those components are,
-their responsibilities and the technology/implementation details.
+На диаграмме компонентов показано, как контейнер состоит из нескольких "компонентов", что представляет собой каждый из 
+этих компонентов, их обязанности и детали технологии/реализации.
 
-## Example
+## Пример
 
 [![A component diagram](https://static.structurizr.com/workspace/36141/diagrams/Components.png)](https://static.structurizr.com/workspace/36141/diagrams/Components.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/Components-key.png)](https://static.structurizr.com/workspace/36141/diagrams/Components-key.png)
 
-## Scope
+## Охват
 
-A single container.
+Отдельный контейнер.
 
-## Primary elements
+## Первичные элементы
 
-Components within the container in scope.
+Компоненты внутри контейнера в пределах видимости.
 
-## Supporting elements
+## Поддерживающие элементы
 
-Containers (within the software system in scope) plus people and software systems directly connected to the components.
+Контейнеры (в рамках программной системы), а также люди и программные системы, непосредственно подключенные к 
+компонентам.
 
-## Intended audience
+## Целевая аудитория
 
-Software architects and developers.
+Архитекторы и разработчики программного обеспечения.
 
-## Recommended?
+## Рекомендовано?
 
-No, only create component diagrams if you feel they add value, and consider automating their creation
-for long-lived documentation.
+Нет, создавайте диаграммы компонентов только в том случае, если вы считаете, что они повышают ценность, и подумайте об 
+автоматизации их создания для создания долговременной документации.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>
