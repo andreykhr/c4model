@@ -1,72 +1,75 @@
 ---
 layout: default
-title: Tooling
+title: Инструменты
 nav_order: 6
 permalink: /tooling
 ---
 
-# Tooling
+# Инструменты
 
-For design sessions, you might find a whiteboard or flip chart paper better for collaboration, and iterating quickly.
-For long-lived documentation, there are a number of tools can help create software architecture diagrams based upon
-the C4 model. Here are some of the questions you should ask yourself when looking at tooling:
+На занятиях по проектированию вы можете воспользоваться белой доской или флипчартом, которые лучше подходят для
+совместной работы и быстрого выполнения итераций. Для долговременной документации существует ряд инструментов, которые
+помогут создать диаграммы архитектуры программного обеспечения на основе модели C4. Вот некоторые из вопросов, которые
+вы должны задать себе, рассматривая инструменты:
 
-- Who are the diagram authors, and how technical are they?
-- Who is the diagram audience, and how will they access the diagrams/documentation?
-- [Diagramming vs modelling?](/tooling#diagramming-vs-modelling)
-- A "drag and drop" UI vs "diagrams as code"?
-- Data stored in git next to your source code vs stored in the tool/cloud service?
-- Easy to diff source to use in pull requests?
-- Closed vs open data format?
-- Interactive vs static diagrams?
-- Free vs paid?
-- Closed vs open source?
-- Cloud vs self-hosted?
-- Short-lived vs long-lived documentation?
-- Team only diagramming vs enterprise-wide modelling?
+- Кто авторы диаграмм и насколько они технически подготовлены?
+- Кто аудитория диаграмм и как они получат доступ к диаграммам/документации?
+- [Построение диаграмм против моделирования?] (/tooling#построение диаграмм против моделирования)
+- Интерфейс с "перетаскиванием" в сравнении с "диаграммами в виде кода"?
+- Данные, хранящиеся в git рядом с вашим исходным кодом, по сравнению с данными, хранящимися в инструменте / облачном сервисе?
+- Простые для сранвнения исходные тексты для использования в `pull requests`?
+- Закрытый формат данных или открытый формат данных?
+- Интерактивные диаграммы или статические диаграммы?
+- Бесплатный или платный?
+- Закрытый или с открытым исходным кодом?
+- Облачный или автономный?
+- Коротко или долго живущая документация?
+- Построение диаграмм только для команды или моделирование в масштабах предприятия?
 
-## Diagramming vs modelling
+## Построение диаграмм против моделирования
 
-A short note on diagramming vs modelling, since this is the biggest decision you'll need to make regarding tooling.
-The C4 model *can* be used irrespective of whether you use a diagramming or modelling tool, but there are some 
-interesting opportunities when you progress from diagramming to modelling.
+Небольшое замечание о сравнении построения диаграмм и моделирования, поскольку это самое важное решение, которое вам
+нужно будет принять в отношении инструментов. Модель C4 *может* использоваться независимо от того, используете ли вы
+инструмент для построения диаграмм или моделирования, но при переходе от построения диаграмм к моделированию открываются
+некоторые интересные возможности.
 
-### Diagramming
+### Построение диаграмм
 
-As an industry, we've tended to prefer diagramming (e.g. Visio, draw.io, Lucidchart, PlantUML, Mermaid, etc) 
-over modelling (e.g. Sparx EA, Archi, IcePanel, Structurizr, etc), primarily because the barrier to entry is relatively 
-low, and it's seen as a much simpler task. But there are a number of major problems with using diagramming tools for
-software architecture diagrams:
+Как отрасль, мы, как правило, предпочитаем построение диаграмм (например, Visio, draw.io, Lucidchart, PlantUML, Mermaid и т.д.)
+над моделированием (например, Sparx EA, Archi, Ice Panel, Structurizr и т.д.), в первую очередь потому, что барьер для входа относительно
+низок, и это рассматривается как гораздо более простая задача. Но существует ряд серьезных проблем, связанных с использованием инструментов построения диаграмм для
+построения диаграмм архитектуры программного обеспечения:
 
-1. The domain language of diagramming tools is "boxes and lines", which means:
-   - They can't provide any assistance or validation of your diagrams.
-   - You can't query the diagrams (e.g. "show me all dependencies of component X").
-2. Reusing diagram elements is done via copy-paste - if you rename a box, you need to rename it across every diagram where it appears.
-3. Many diagramming tools have data formats that are hard to diff, making them tricky to use in conjunction with pull requests, for example.
+1. Язык предметной области инструментов построения диаграмм - "прямоугольники и линии", что означает:
+   - Они не могут предоставить никакой помощи или проверки правильности ваших диаграмм.
+   - Вы не можете запрашивать диаграммы (например, "покажите мне все зависимости компонента X").
+2. Повторное использование элементов диаграммы осуществляется с помощью копирования и вставки - если вы переименовываете поле, вам нужно переименовать его на каждой диаграмме, где оно появляется.
+3. Многие инструменты построения диаграмм имеют трудно различимые форматы данных, что затрудняет их использование, например, в сочетании с `Pull requests`.
 
-### Modelling
+### Моделирование
 
-With a modelling tool, you're building up a non-visual model of your software architecture
-(a single definition of all elements and the relationships between them), and then creating different views
-(that become diagrams) on top of that model. This requires a little more rigour, but the problems can be resolved - 
-modelling tools can understand the semantics of what you're trying to do, provide additional assistance,
-and renaming elements/relationships is easy.
+С помощью инструмента моделирования вы создаете не визуальную модель архитектуры вашего программного
+обеспечения (единое определение всех элементов и взаимосвязей между ними), а затем создаете различные представления
+(которые становятся диаграммами) поверх этой модели. Это требует немного большей тщательности, но проблемы могут быть решены -
+инструменты моделирования могут понять семантику того, что вы пытаетесь сделать, оказать дополнительную помощь,
+а переименование элементов / связей выполняется легко.
 
-Software architecture models are essentially just [directed graphs](https://en.wikipedia.org/wiki/Directed_graph),
-consisting of nodes and edges, with diagrams showing a subset of the graph. Once you see the separation of the model
-(which is just structured data) and the views (which are rendered as diagrams), you quickly see there are a number of
-interesting opportunities that arise:
+Модели архитектуры программного обеспечения, по сути, представляют собой просто [ориентированные графы](https://en.wikipedia.org/wiki/Directed_graph),
+состоящие из узлов и ребер, с диаграммами, показывающими подмножество графа. Как только вы увидите разделение модели
+(которая представляет собой просто структурированные данные) и представлений (которые отображаются в виде диаграмм),
+вы сразу поймете, что перед вами открывается целый ряд интересных возможностей:
 
-- Creating alternative visualisations to help understand large and complicated architecture models - see [Does the C4 model scale?](/faq#does-the-c4-model-scale) for more.
-- Querying the model.
-- Exporting the model to other tools.
-- etc
+- Создание альтернативных визуализаций, помогающих понять большие и сложные архитектурные модели - подробнее см. в разделе [Масштабируется ли модель C4?](/faq#масштабируется-ли-модель-c4).
+- Запрос модели.
+- Экспорт модели в другие инструменты.
+- и так далее
 
-A model is just data! And we, as software developers, have an endless supply of tools to visualise and manipulate that data.
+Модель - это всего лишь данные! И мы, как разработчики программного обеспечения, располагаем бесконечным набором
+инструментов для визуализации этих данных и управления ими.
 
-## Options
+## Варианты
 
-Here's a collection of tooling that provides some degree of specific support for the C4 model.
+Вот набор инструментов, которые обеспечивают некоторую специфическую поддержку модели C4.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 
@@ -115,59 +118,59 @@ Here's a collection of tooling that provides some degree of specific support for
 <table>
 <tr>
 <td style="vertical-align: top">
-    <h4>Supported diagram types</h4>
+    <h4>Поддерживаемые типы диаграмм</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingStaticDiagramsFilter" type="checkbox" checked="checked" disabled="disabled"> Static diagrams</label>
-        <div class="smaller">(e.g. system context, container, and component diagrams)</div>
+        <label><input id="toolingStaticDiagramsFilter" type="checkbox" checked="checked" disabled="disabled"> Статические диаграммы</label>
+        <div class="smaller">(например, системный контекст, схемы контейнеров и компонентов)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingDynamicDiagramsFilter" type="checkbox"> Dynamic diagrams</label>
-        <div class="smaller">(e.g. collaboration or sequence diagrams)</div>
+        <label><input id="toolingDynamicDiagramsFilter" type="checkbox"> Динамические диаграммы</label>
+        <div class="smaller">(например, диаграммы совместной работы или последовательности действий)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> Deployment diagrams</label>
-        <div class="smaller">(e.g. diagrams showing deployment and infrastructure concerns)</div>
+        <label><input id="toolingDeploymentDiagramsFilter" type="checkbox"> Диаграммы развертывания</label>
+        <div class="smaller">(например, диаграммы, показывающие проблемы с развертыванием и инфраструктурой)</div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Diagramming vs modelling</h4>
+    <h4>Диаграммы или моделирование</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingDiagrammingFilter" name="diagramVsModel" type="radio"> Diagramming tool</label>
-        <div class="smaller">(i.e. a modelling tool - to keep multiple diagrams in sync automatically when you rename elements)</div>
+        <label><input id="toolingDiagrammingFilter" name="diagramVsModel" type="radio"> Инструмент для построения диаграмм</label>
+        <div class="smaller">(то есть инструмент моделирования - для автоматической синхронизации нескольких диаграмм при переименовании элементов)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingModelBasedFilter" name="diagramVsModel" type="radio" checked="checked"> Reuse elements across multiple diagrams</label>
-        <div class="smaller">(i.e. a modelling tool - to keep multiple diagrams in sync automatically when you rename elements)</div>
+        <label><input id="toolingModelBasedFilter" name="diagramVsModel" type="radio" checked="checked"> Повторное использование элементов на нескольких диаграммах</label>
+        <div class="smaller">(то есть инструмент моделирования - для автоматической синхронизации нескольких диаграмм при переименовании элементов)</div>
         <div style="margin-top: 10px">
-        <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">Recommended</span>
+        <span class="smaller" style="font-weight: normal; background: #02b621; color: #ffffff; padding: 5px; margin-top: 10px;">Рекомендуемый</span>
         </div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Authoring</h4>
+    <h4>Авторство</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingWithUIFilter" name="authoring" type="radio"> Graphical user interface</label>
-        <div class="smaller">(drag and drop modelling UI)</div>
+        <label><input id="toolingWithUIFilter" name="authoring" type="radio"> Графический интерфейс пользователя</label>
+        <div class="smaller">(пользовательский интерфейс моделирования перетаскиванием)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> Diagrams and models as code</label>
-        <div class="smaller">(for easy version control and integration into build pipelines/other tools)</div>
+        <label><input id="toolingAsCodeFilter" name="authoring" type="radio" checked="checked"> Диаграммы и модели в виде кода</label>
+        <div class="smaller">(для упрощения контроля версий и интеграции в конвейеры сборки/ другие инструменты)</div>
     </div>
 </td>
 <td style="vertical-align: top">
-    <h4>Other</h4>
+    <h4>Другое</h4>
     <div class="toolingOptionFilter">
-        <label><input id="toolingOpenSourceFilter" type="checkbox"> Open source</label>
-        <div class="smaller">(free, fork/customize, etc)</div>
+        <label><input id="toolingOpenSourceFilter" type="checkbox"> С открытым исходным кодом</label>
+        <div class="smaller">(бесплатно, разветвлять / настраивать и т.д.)</div>
     </div>
 
     <div class="toolingOptionFilter">
-        <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> Rendering tool independent</label>
-        <div class="smaller">(to render diagrams with different tools or visualisation formats such as <a href="/diagrams/notation#alternative-visualisations">diagrams, graphs, etc</a>)</div>
+        <label><input id="toolingRenderingToolIndependentFilter" type="checkbox"> Независимый инструмент рендеринга</label>
+        <div class="smaller">(для визуализации диаграмм с помощью различных инструментов или форматов визуализации, таких как <a href="/диаграммы/обозначения#альтернативные визуализации">диаграммы, графики и т.д.</a>)</div>
     </div>
 </td>
 </tr>
