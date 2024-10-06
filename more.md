@@ -1,63 +1,63 @@
 ---
 layout: default
-title: More information
+title: Больше информации
 nav_order: 90
 permalink: /more
 ---
 
-# More information
+# Больше информации
 
-## Books
+## Книги
 
-This is Simon Brown's [The C4 model for visualising software architecture](https://leanpub.com/visualising-software-architecture) 
-ebook, which is available to purchase from Leanpub in PDF, EPUB and MOBI formats.
-It forms the basis for his [workshop](https://simonbrown.je#workshop3) and includes a number of more advanced C4 model topics.
+Это электронная книга Саймона Брауна [Модель C4 для визуализации архитектуры программного обеспечения](https://leanpub.com/visualising-software-architecture),
+которую можно приобрести в Leanpub в форматах PDF, EPUB и MOBI.
+Она легла в основу его [семинара](https://simonbrown.je#workshop 3) и включает в себя ряд более сложных тем для модели C4.
 
 [![The C4 model for visualising software architecture book](/images/book-small.png)](https://leanpub.com/visualising-software-architecture)
 
-It is also referenced in the following books:
+На него также есть ссылки в следующих книгах:
 
 - [Fundamentals of Software Architecture](https://www.oreilly.com/library/view/fundamentals-of-software/9781492043447/) (Mark Richards, Neal Ford)
 - [Design It!](https://pragprog.com/titles/mkdsa/design-it/) (Michael Keeling)
 - [Software Architecture with Spring 5.0](https://www.packtpub.com/free-ebook/software-architecture-with-spring-5-0/9781788992992) (René Enríquez, Alberto Salazar)
 - [Software Architecture](https://leanpub.com/software-architecture) (Cesare Pautasso)
 
-## Presentations
+## Презентации
 
 <table style="text-align: center">
 <tr>
 <td>
 <iframe src="https://www.youtube-nocookie.com/embed/x2-rSnhpw0g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br />
-<b>Visualising software architecture with the C4 model</b>
+<b>Визуализация архитектуры программного обеспечения с помощью модели C4</b>
 <br />
-Recorded at "Agile on the Beach 2019", July 2019
+Запись сделана на выставке "Agile on the Beach 2019", июль 2019 года
 </td>
 <td>
 <iframe src="https://www.youtube-nocookie.com/embed/LYzOc7vI-Uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <br />
-<b>C4 models as code</b>
-<br />Recorded at "Devoxx Belgium", October 2023
+<b>Модели C4 в виде кода</b>
+<br />Записано на "Devoxx Belgium", октябрь 2023 года
 </td>
 </tr>
 </table>
 
-## Who is using C4?
+## Кто использует C4?
 
-Simon has personally taught the C4 model to 10,000+ people in 30+ countries;
-with conference talks, videos, books, and articles reaching many more than this.
-Other people are also teaching, speaking, and writing about the C4 model,
-plus it's been [integrated into a number of tools](/tooling).
-Here are some case studies:
+Саймон лично обучил модели C4 более 10 000 человек в более чем 30 странах мира;
+благодаря выступлениям на конференциях, видеозаписям, книгам и статьям это число достигло гораздо большего.
+Другие люди также преподают, выступают и пишут о модели C4,
+плюс она была [интегрирована в ряд инструментов](/tooling).
+Вот несколько примеров из практики:
 
 - Spotify: [Spotify Engineering: Software Visualization - Challenge, Accepted](https://engineering.atspotify.com/2022/07/software-visualization-challenge-accepted/)
 - Boots: [The Engineering Leader: A Moment on C4 Architectural Design with Amar Mehan](https://www.theengineeringleader.com/1946930/10648894-a-moment-on-c4-architectural-design-with-amar-mehan)
 - Decathlon: [Navigating Software Architecture at Scale: Insights from Decathlon’s Architecture Process](https://www.infoq.com/news/2024/07/decathlon-architecture-process/)
 - Co-op: [LinkedIn post](https://www.linkedin.com/posts/popovdenys_diagramming-platforms-architecture-activity-7220039863813763073-1XQ3/)
 
-## Other
+## Другое
 
-And here are some other resources that reference the C4 model:
+И вот некоторые другие ресурсы, которые ссылаются на модель C4:
 
 - [Wikipedia](https://en.wikipedia.org/wiki/C4_model)
 - [InfoQ: The C4 model for software architecture](https://www.infoq.com/articles/C4-architecture-model)
