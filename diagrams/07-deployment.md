@@ -1,65 +1,66 @@
 ---
 layout: default
-title: Deployment diagram
+title: Диаграмма развертывания
 parent: Диаграммы
 nav_order: 7
 permalink: /diagrams/deployment
 ---
 
-# Deployment diagram
+# Диаграмма развертывания
 
-A deployment diagram allows you to illustrate how instances of software systems and/or containers in the static model
-are deployed on to the infrastructure within a given __deployment environment__
-(e.g. production, staging, development, etc).
-It's based upon a [UML deployment diagram](https://en.wikipedia.org/wiki/Deployment_diagram).
+Диаграмма развертывания позволяет проиллюстрировать, как экземпляры программных систем и/или контейнеров в статической модели
+развертываются в инфраструктуре в рамках заданной среды развертывания (например, производственная, промежуточная, 
+разработка и т.д.). Он основан на [схеме развертывания UML](https://en.wikipedia.org/wiki/Deployment_diagram).
 
-A __deployment node__ represents where an instance of a software system/container is running;
-perhaps physical infrastructure (e.g. a physical server or device), virtualised infrastructure
-(e.g. IaaS, PaaS, a virtual machine), containerised infrastructure (e.g. a Docker container),
-an execution environment (e.g. a database server, Java EE web/application server, Microsoft IIS), etc.
-Deployment nodes can be nested.
+__Узел развертывания__ представляет, где запущен экземпляр программной системы/контейнера;
+возможно, физическая инфраструктура (например, физический сервер или устройство), виртуализированная инфраструктура
+(например, IaaS, PaaS, виртуальная машина), контейнеризированная инфраструктура (например, контейнер Docker),
+среда выполнения (например, сервер баз данных, сервер веб-приложений Java EE, Microsoft IIS) и т.д.
+Узлы развертывания могут быть вложенными.
 
-You may also want to include __infrastructure nodes__ such as DNS services, load balancers, firewalls, etc.
+Вы также можете захотеть включить __узлы инфраструктуры__, такие как службы DNS, балансировщики нагрузки, брандмауэры
+и т.д.
 
-Feel free to use icons provided by Amazon Web Services, Azure, etc to complement your deployment diagrams ...
-just make sure any icons you use are included in your diagram key/legend.
+Не стесняйтесь использовать значки, предоставляемые Amazon Web Services, Azure и т.д., для дополнения ваших диаграмм 
+развертывания... просто убедитесь, что все используемые вами значки включены легенду вашей диаграммы.
 
-## Example 1
+## Пример 1
 
 [![A deployment diagram](https://static.structurizr.com/workspace/36141/diagrams/LiveDeployment.png)](https://static.structurizr.com/workspace/36141/diagrams/LiveDeployment.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/LiveDeployment-key.png)](https://static.structurizr.com/workspace/36141/diagrams/LiveDeployment-key.png)
 
-## Example 2
+## Пример 2
 
 [![A deployment diagram](https://static.structurizr.com/workspace/54915/diagrams/AmazonWebServicesDeployment.png)](https://static.structurizr.com/workspace/54915/diagrams/AmazonWebServicesDeployment.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/54915/diagrams/AmazonWebServicesDeployment-key.png)](https://static.structurizr.com/workspace/54915/diagrams/AmazonWebServicesDeployment-key.png)
 
-## Scope
+## Область видимости
 
-One or more software systems within a single deployment environment (e.g. production, staging, development, etc).
+Одна или несколько программных систем в рамках единой среды развертывания (например, производственная, промежуточная, 
+разработка и т.д.).
 
-## Primary and supporting elements
+## Основные и вспомогательные элементы
 
-Deployment nodes, software system instances, and container instances.
+Узлы развертывания, экземпляры программных систем и экземпляры контейнеров.
 
-## Supporting elements
+## Поддерживающие элементы
 
-Infrastructure nodes used in the deployment of the software system.
+Узлы инфраструктуры, используемые при развертывании программной системы.
 
-## Intended audience
+## Целевая аудитория
 
-Technical people inside and outside of the software development team; including software architects, developers,
-infrastructure architects, and operations/support staff.
+Технические специалисты как внутри, так и за пределами команды разработчиков программного обеспечения, включая 
+архитекторов программного обеспечения, разработчиков инфраструктуры и персонал операционной службы/службы поддержки.
 
-## Recommended?
+## Рекомендуется?
 
-Yes.
+Да.
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>
