@@ -7,110 +7,110 @@ permalink: /faq
 
 # Часто задаваемые вопросы
 
-## What's the background behind the C4 model?
+## Какова предыстория модели C4?
 
-The C4 model was created by [Simon Brown](http://simonbrown.je), who started teaching software architecture,
-while working as a software developer/architect. Part of Simon's training course was a design exercise,
-where groups of people were given some requirements, asked to do some design, and to draw some diagrams to express
-that design.
+Модель C4 была создана [Саймоном Брауном](http://simonbrown.je), который начал преподавать архитектуру программного обеспечения,
+работая разработчиком программного обеспечения/архитектором. Частью учебного курса Саймона было упражнение по проектированию,
+во время которого группам людей предъявляли некоторые требования, просили выполнить какой-либо дизайн и нарисовать несколько диаграмм, чтобы выразить
+этот дизайн.
 
-Although this was a design focussed exercise, the wide variety of diagrams made it evident that the visualisation
-of ideas was a skill that most people sorely lacked. The C4 model is essentially a formalisation of how Simon used
-to visualise software architecture, which has evolved over the years.
+Хотя это было упражнение, ориентированное на дизайн, большое разнообразие диаграмм показало, что визуализация
+идей - это навык, которого остро не хватает большинству людей. Модель C4, по сути, является формализацией того, как Саймон использовал
+для визуализации архитектуры программного обеспечения, которая развивалась на протяжении многих лет.
 
-Exact dates are hard to pin down, but the roots of the C4 model can be traced back to somewhere in the region
-of 2006-2009, the diagram types ("context", "containers", "components", "classes") were named in early 2010,
-with the "C4" name being first used in early 2011. The fourth diagram type was renamed from "classes" to "code"
-during 2015-2016.
+Точные даты установить сложно, но истоки модели C4 можно проследить где-то в районе
+2006-2009 годов, а типы диаграмм ("контекст", "контейнеры", "компоненты", "классы") были названы в начале 2010 года,
+причем название "C4" было впервые был использован в начале 2011 года. Четвертый тип диаграммы был переименован из "классов" в "код"
+в течение 2015-2016 годов.
 
-## What's the inspiration behind the C4 model?
+## Что послужило источником вдохновения для модели C4?
 
-The C4 model was created during a time where teams, influenced by the agile movement, were less than enthusiastic
-about using the [Unified Modeling Language](https://en.wikipedia.org/wiki/Unified_Modeling_Language) (UML) to document
-software architecture, if they were creating diagrams at all. Despite this, the C4 model was inspired by UML and
-the [4+1 model for software architecture](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model).
-In summary, you can think of the C4 model as a simplified version of the underlying concepts, designed to
-(1) make it easier for software developers to describe and understand how a software system works and
-(2) to minimise the gap between the software architecture model/description and the source code.
+Модель C4 была создана в то время, когда команды, находящиеся под влиянием движения agile, не проявляли особого энтузиазма
+по поводу использования [унифицированного языка моделирования](https://en.wikipedia.org/wiki/Unified_Modeling_Language) (UML) для документирования
+архитектуры программного обеспечения, если они вообще создавали диаграммы. Несмотря на это, модель C4 была основана на UML и
+[модели 4+1 для архитектуры программного обеспечения](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model).
+Таким образом, вы можете рассматривать модель C4 как упрощенную версию базовых концепций, разработанную для
+(1) упростить разработчикам программного обеспечения описание и понимание того, как работает программная система, и
+(2) свести к минимуму разрыв между моделью/описанием архитектуры программного обеспечения и исходным кодом.
 
-## Isn't the C4 model a step backwards? Why are you reinventing UML? Why not just use UML?
+## Не является ли модель C4 шагом назад? Почему вы изобретаете UML заново? Почему бы просто не использовать UML?
 
-Whether you see the C4 model as a step forwards or a step backwards depends upon where you are. If you're using UML
-(or SysML, ArchiMate, etc) and it's working for you, stick with it. Unfortunately, UML usage seems to be in decline, 
-and many teams have reverted to using ad hoc boxes and lines diagrams once again. Given that many of those teams don't 
-want to use UML (for various reasons), the C4 model helps introduce some structure and discipline into the way software 
-architecture is communicated. For many teams, the C4 model is sufficient. And for others, perhaps it's a stepping stone 
-to UML.
+Рассматриваете ли вы модель C4 как шаг вперед или шаг назад, зависит от того, где вы находитесь. Если вы используете UML
+(или SysML, ArchiMate и т.д.), И это работает у вас, придерживайтесь этого. К сожалению, использование UML, похоже, идет на спад,
+и многие команды снова вернулись к использованию для этого случая диаграммы с квадратами и линиями. Учитывая, что многие из этих команд не
+хотят использовать UML (по разным причинам), модель C4 помогает привнести некоторую структуру и дисциплину в процесс взаимодействия с
+архитектурой программного обеспечения. Для многих команд модель C4 является достаточной. А для других, возможно, это шаг вперед
+в UML.
 
-## Why doesn't the C4 model cover business processes, workflows, state machines, domain models, data models, etc?
+## Почему модель C4 не охватывает бизнес-процессы, рабочие потоки, конечные автоматы, модели предметной области, модели данных и т.д.?
 
-The focus of the C4 model is the static structures that make up a software system, at different levels of abstraction. 
-If you need to describe other aspects, feel free to supplement the C4 diagrams with UML diagrams, BPML diagrams, 
-ArchiMate diagrams, entity relationship diagrams, etc.
+Основное внимание в модели C4 уделяется статическим структурам, составляющим программную систему, на разных уровнях абстракции.
+Если вам нужно описать другие аспекты, не стесняйтесь дополнять диаграммы C4 диаграммами UML, диаграммами BPMN,
+Диаграммами ArchiMate, диаграммами взаимосвязей сущностей и т.д.
 
-## Does the C4 model imply a design process or team structure?
+## Подразумевает ли модель C4 процесс проектирования или структуру команды?
 
-A common misconception is that a team's design process should follow the levels in the C4 model hierarchy, perhaps 
-with different people on the team being responsible for different levels of diagrams. For example, a business analyst 
-creates the system context diagram, the architect creates the container diagram, while the developers look after the 
-remaining levels of detail.
+Распространенным заблуждением является то, что процесс проектирования в команде должен соответствовать уровням иерархии
+моделей C4, возможно, разные люди в команде отвечают за разные уровни диаграмм. Например, бизнес-аналитик
+создает контекстную диаграмму системы, архитектор создает контейнерную диаграмму, в то время как разработчики заботятся об
+остальных уровнях детализации.
 
-Although you can certainly use the C4 model in this way, this is not the intended or recommended usage pattern. The 
-C4 model is just a way to describe a software system, from different levels of abstraction, and it implies nothing 
-about the process of delivering software.
+Хотя вы, безусловно, можете использовать модель C4 таким образом, это не предполагаемый и не рекомендуемый способ использования. То
+Модель C4 - это всего лишь способ описания программной системы с разных уровней абстракции, и она ничего не говорит
+о процессе разработки программного обеспечения.
 
-## Using C4 to describe libraries, frameworks and SDKs?
+## Используете C4 для описания библиотек, фреймворков и SDK?
 
-The C4 model is really designed to model a software system, at various levels of abstraction. To document a library,
-framework or SDK, you might be better off using something like UML. Alternatively, you could use the C4 model to
-describe a usage example of your framework, library or SDK; perhaps using colour coding to signify which parts of
-the software system are bespoke vs those provided for you.
+Модель C4 на самом деле предназначена для моделирования программной системы на различных уровнях абстракции. Для документирования библиотеки,
+фреймворка или SDK, возможно, лучше использовать что-то вроде UML. В качестве альтернативы вы могли бы использовать модель C4 для
+описания примера использования вашего фреймворка, библиотеки или SDK; возможно, используя цветовое кодирование, чтобы указать, какие части
+программной системы созданы на заказ, а какие предоставлены вам.
 
-## Is the C4 model universally applicable?
+## Является ли модель C4 универсально применимой?
 
-The C4 model was designed to help describe, document, and diagram custom-built, bespoke software systems. From this 
-perspective, the C4 model can be used to describe a variety of software architectures (monolithic or distributed), 
-built in a variety of programming languages, deployed on a variety of platforms (on-premises or cloud).
+Модель C4 была разработана для того, чтобы помочь описывать, документировать и создавать схемы специально разработанных программных систем. С этой
+точки зрения модель C4 может быть использована для описания различных архитектур программного обеспечения (монолитных или распределенных),
+построенных на различных языках программирования, развернутых на различных платформах (локальных или облачных).
 
-Solutions that are perhaps less suited to the C4 model include embedded systems/firmware, and solutions that rely on 
-heavy customization rather than bespoke development (e.g. SAP and Salesforce). Even with these solutions, you still may 
-find the System Context and Container diagrams useful.
+К решениям, которые, возможно, в меньшей степени подходят для модели C4, относятся встроенные системы/микропрограммное обеспечение, а также решения, которые основаны на
+сложной настройке, а не на разработке на заказ (например, SAP и Salesforce). Даже при использовании этих решений вы все равно можете
+счесть полезными системный контекст и схемы контейнеров.
 
-## Does the C4 model scale?
+## Масштабируется ли модель C4?
 
-The example diagrams conveniently consist of a small number of boxes and arrows, but you might be asking how the C4 model
-can be used with real-world software systems, where you have 600 components rather than 6.
-The answer is that the tooling you choose can either help or hinder you.
+Удобно, что диаграммы-примеры состоят из небольшого количества прямоугольников и стрелок, но вы можете спросить, как модель C4
+может быть использована в реальных программных системах, где у вас 600 компонентов, а не 6.
+Ответ заключается в том, что выбранный вами инструмент может как помочь, так и помешать вам.
 
-Even with a relatively small software system, it's tempting to try and include the entire story on a single diagram.
-For example, if you have a web application, it seems logical to create a single component diagram that shows all
-the components that make up that web application. Unless your software system really is that small, you're likely to
-run out of room on the diagram canvas or find it difficult to discover a layout that isn't cluttered by a myriad of
-overlapping lines. Using a larger diagram canvas can sometimes help, but large diagrams are usually hard to interpret
-and comprehend because the cognitive load is too high. And if nobody understands the diagram, nobody is going to look
-at it.
+Даже в случае относительно небольшой программной системы возникает соблазн попытаться отразить всю историю на одной диаграмме.
+Например, если у вас есть веб-приложение, кажется логичным создать единую компонентную диаграмму, на которой будут показаны все
+компоненты, составляющие это веб-приложение. Если ваша программная система на самом деле не такая маленькая, вам, скорее
+всего, не хватит места на диаграмме или вам будет трудно найти схему, которая не была бы загромождена множеством
+перекрывающихся линий. Иногда может помочь использование диаграммы большего размера, но большие диаграммы обычно трудно интерпретировать
+и понимать, потому что когнитивная нагрузка слишком высока. И если никто не понимает диаграмму, никто не будет
+на нее смотреть.
 
-Instead, don't be afraid to split that single complex diagram into a larger number of simpler diagrams, each with a
-specific focus around a business area, functional area, functional grouping, bounded context, use case, user
-interaction, feature set, etc. The key is to ensure that each of the separate diagrams tells a different part of the
-same overall story, at the same level of abstraction.
+Вместо этого не бойтесь разбить эту единую сложную диаграмму на большее количество более простых, каждая из
+которых посвящена определенной бизнес-области, функциональной области, функциональной группировке, ограниченному контексту, варианту использования,
+взаимодействию с пользователем, набору функций и т.д. Главное - убедиться, что каждая из отдельных диаграмм рассказывает о разных частях одной и той
+же общей истории на одном и том же уровне абстракции.
 
-Here's an example of a container diagram showing a software system comprised of a number of microservices:
+Вот пример схемы контейнера, показывающей программную систему, состоящую из нескольких микросервисов:
 
 [![](/images/scale-1.png)](/images/scale-1.png)
 
-This diagram works at the moment, but will quickly become cluttered as we add more services. As an alternative approach,
-rather than creating a single diagram showing 8 services, we could create 8 diagrams that each focus on a single service,
-showing the nearest afferent (inbound) and efferent (outbound) dependencies:
+На данный момент эта схема работает, но по мере добавления новых сервисов она будет быстро усложняться. В качестве альтернативного подхода,
+вместо создания единой диаграммы, показывающей 8 служб, мы могли бы создать 8 диаграмм, каждая из которых посвящена одной службе и
+показывает ближайшие афферентные (входящие) и эфферентные (исходящие) зависимости:
 
 | [![](/images/scale-2.png)](/images/scale-2.png) | [![](/images/scale-3.png)](/images/scale-3.png) | [![](/images/scale-4.png)](/images/scale-4.png) |
 | Service 1 | Service 2 | Service 3 |
 
-This is difficult to do with a diagramming tool, but trivial with a modelling tool -
-see [Diagramming vs modelling](/tooling#diagramming-vs-modelling) for more details.
-The trade-off here is that we lose the "big picture". So another option is to create some
-alternative visualisations that are not as verbose as the traditional "boxes and lines" diagrams.
-Again, this is relatively straightforward when you use a modelling tool, and think about the software architecture
-model as being a data structure that you can visualise in different ways.
+Это сложно сделать с помощью инструмента построения диаграмм, но тривиально с помощью инструмента моделирования -
+более подробную информацию смотрите в разделе [Построение диаграмм и моделирование](/tooling#построение-диаграмм-или-моделирование).
+В результате мы теряем "общую картину". Поэтому другой вариант - создать несколько
+альтернативных визуализаций, которые не будут такими подробными, как традиционные диаграммы "прямоугольники и линии".
+Опять же, это относительно просто, когда вы используете инструмент моделирования и рассматриваете
+модель архитектуры программного обеспечения как структуру данных, которую вы можете визуализировать различными способами.
 
 | [![](/images/scale-5.png)](/images/scale-5.png) | [![](/images/scale-6.png)](/images/scale-6.png) |
