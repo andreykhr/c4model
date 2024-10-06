@@ -1,37 +1,40 @@
 ---
 layout: default
-title: 4. Code diagram
+title: 4. Диаграмма кода
 parent: Диаграммы
 nav_order: 4
 permalink: /diagrams/code
 ---
 
-# Code diagram
+# Диаграмма кода
 
-Finally, you can zoom in to each component to show how it is implemented as code; using UML class diagrams, entity
-relationship diagrams or similar.
+Наконец, вы можете увеличить масштаб каждого компонента, чтобы показать, как он реализован в виде кода; используя 
+диаграммы классов UML, диаграммы взаимосвязей сущностей или что-то подобное.
 
-This is an optional level of detail and is often available on-demand from tooling such as IDEs. Ideally this
-diagram would be automatically generated using tooling (e.g. an IDE or UML modelling tool), and you should consider
-showing only those attributes and methods that allow you to tell the story that you want to tell. This level of detail
-is not recommended for anything but the most important or complex components.
+Это необязательный уровень детализации, который часто доступен по запросу с помощью таких инструментов, как IDE. В 
+идеале эта диаграмма должна создаваться автоматически с использованием инструментов (например, IDE или 
+UML-моделирования), и вам следует рассмотреть возможность отображения только тех атрибутов и методов, которые позволяют
+вам рассказать историю, которую вы хотите рассказать. Такой уровень детализации рекомендуется применять только для 
+наиболее важных или сложных компонентов.
 
-## Example
+## Пример
 
 [![A code diagram](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png)](https://static.structurizr.com/workspace/36141/diagrams/MainframeBankingSystemFacade.png)
 
-## Scope
+## Охват
 
-A single component.
+Отдельный компонент.
 
-## Primary elements
+## Первичные элементы
 
-Code elements (e.g. classes, interfaces, objects, functions, database tables, etc) within the component in scope.
+Элементы кода (например, классы, интерфейсы, объекты, функции, таблицы базы данных и т.д.) внутри компонента в 
+области видимости.
 
-## Intended audience
+## Целевая аудитория
 
-Software architects and developers.
+Архитекторы и разработчики программного обеспечения.
 
-## Recommended?
+## Рекомендовано?
 
-No, particularly for long-lived documentation because most IDEs can generate this level of detail on demand.
+Нет, особенно для долговременной документации, поскольку большинство IDE могут генерировать такой уровень детализации
+по требованию.
