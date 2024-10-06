@@ -1,56 +1,62 @@
 ---
 layout: default
-title: 2. Container diagram
+title: 2. Диаграмма контейнеров
 parent: Диаграммы
 nav_order: 2
 permalink: /diagrams/container
 ---
 
-# Container diagram
+# Диаграмма контейнеров
 
-Once you understand how your system fits in to the overall IT environment, a really useful next step is to zoom-in to
-the system boundary with a Container diagram. A "container" is something like a server-side web application, 
-single-page application, desktop application, mobile app, database schema, file system, etc. Essentially,
-a container is a separately runnable/deployable unit (e.g. a separate process space) that executes code or stores data.
+Как только вы поймете, как ваша система вписывается в общую ИТ-среду, следующим действительно полезным шагом будет 
+увеличение масштаба границ системы с помощью диаграммы контейнеров. "Контейнер" - это что-то вроде серверного 
+веб-приложения, одностраничного приложения, настольного приложения, мобильного приложения, схемы базы данных, файловой
+системы и т.д. По сути, контейнер - это отдельно запускаемый/развертываемый модуль (например, отдельное пространство
+процесса), который выполняет код или хранит данные.
 
-The Container diagram shows the high-level shape of the software architecture and how responsibilities are distributed
-across it. It also shows the major technology choices and how the containers communicate with one another. It's a
-simple, high-level technology focussed diagram that is useful for software developers and support/operations staff alike.
+Диаграмма контейнеров показывает высокоуровневую структуру архитектуры программного обеспечения и распределение 
+обязанностей между ними. На ней также показаны основные технологические решения и способы взаимодействия контейнеров 
+друг с другом. Это простая, высокоуровневая диаграмма, ориентированная на технологии, которая полезна как разработчикам
+программного обеспечения, так и сотрудникам службы поддержки/эксплуатации.
 
-## Example
+## Пример
 
 [![A container diagram](https://static.structurizr.com/workspace/36141/diagrams/Containers.png)](https://static.structurizr.com/workspace/36141/diagrams/Containers.png)
 
-### Diagram key
+### Легенда диаграммы
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)](https://static.structurizr.com/workspace/36141/diagrams/Containers-key.png)
 
-## Scope
+## Охват
 
-A single software system.
+Отдельная программная система.
 
-## Primary elements
+## Первичные элементы
 
-Containers within the software system in scope.
+Контейнеры, входящие в состав программной системы in scope.
 
-## Supporting elements
+## Опорные элементы
 
-People and software systems directly connected to the containers.
+Люди и программные системы напрямую подключены к контейнерам.
 
-## Intended audience
+## Целевая аудитория
+
+Технические специалисты как внутри команды разработчиков программного обеспечения, так и за ее пределами, включая 
+архитекторов программного обеспечения, разработчиков и операционный/вспомогательный персонал.
 
 Technical people inside and outside the software development team; including software architects,
 developers and operations/support staff.
 
-## Recommended?
+## Рекомендовано?
 
-Yes, a system context diagram is recommended for all software development teams.
+Таким образом, схема контейнеров рекомендуется для всех групп разработчиков программного обеспечения.
 
-## Notes
+## Примечания
 
-This diagram says nothing about clustering, load balancers, replication, failover, etc because it will likely vary
-across different environments (e.g. production, staging, development, etc). This information is better captured
-via one or more [deployment diagrams](/diagrams/deployment).
+На этой диаграмме ничего не говорится о кластеризации, балансировщиках нагрузки, репликации, отработке отказа и т.д., 
+поскольку она, скорее всего, будет отличаться в разных средах (например, в производственной, промежуточной, 
+разрабатываемой и т.д.). Эту информацию лучше получить с помощью одной или нескольких 
+[диаграмм развертывания](/diagrams/deployment).
 
 <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 <script type="application/javascript" src="/assets/c4model.js"></script>

@@ -25,9 +25,9 @@ permalink: /diagrams/system-context
 
 [![A diagram key](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)](https://static.structurizr.com/workspace/36141/diagrams/SystemContext-key.png)
 
-## Рамка
+## Охват
 
-Единичная программная система
+Отдельная программная система
 
 ## Первичные элементы
 
