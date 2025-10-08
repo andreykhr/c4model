@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Главная
+title: Главная2
 nav_order: 1
 description: C4 model
 permalink: /
